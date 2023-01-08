@@ -1,0 +1,59 @@
+.settings-main-container {
+  background-color: #fff;
+  width: calc(100% - 4rem);
+  height: calc(100% - 88px);
+  margin: 2rem;
+  margin-top: 0;
+  border-radius: 6px;
+}
+
+.setting-group-container {
+  margin-bottom: 2rem;
+}
+
+.setting-group {
+  border-top: 3px solid #ddd;
+}
+
+.setting-group-label {
+  padding: 2rem;
+}
+
+.setting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-bottom: 3px solid #ddd;
+  width: 100%;
+}
+
+.setting .bx {
+  font-size: 18px;
+  padding: 1rem;
+  margin-left: 1rem;
+  border-radius: 6px;
+}
+
+.setting-info {
+  width: 100%;
+}
+
+.setting-info .setting-label {
+  margin-bottom: 6px;
+}
+
+.setting-set {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.setting input {
+  padding: 6px 1rem;
+  border-radius: 3px;
+  border: 1px solid #aaa;
+  outline: none;
+  font-size: 12px;
+  font-weight: 600;
+  width: 100%;
+}

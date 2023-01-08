@@ -1,0 +1,196 @@
+.map-main-container {
+  background: url(/src/img/315520173_1377583026319664_4971874567840211276_n.jpg)
+    no-repeat;
+  background-size: cover;
+  height: calc(100% - 64px);
+  padding: 2rem;
+  color: var(--color-primary);
+  display: flex;
+  justify-content: space-between;
+}
+
+.map-search-container {
+  background-color: #fff;
+  width: 300px;
+  height: 100%;
+  border-radius: 6px;
+  /* min-height: 76px;
+  height: 76px; */
+}
+
+.map-search-container .container-header {
+  width: 100%;
+  display: flex;
+  gap: 6px;
+  padding: 2rem;
+}
+
+.map-search-container .container-header input {
+  padding: 6px 1rem;
+  width: 100%;
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid #aaa;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.map-search-container .container-header input:focus {
+  border: 1px solid var(--color-primary);
+  box-shadow: 1px 1px 3px 2px rgba(0, 0, 255, 0.25);
+}
+
+.map-search-container .container-header .bx {
+  font-size: 18px;
+  color: var(--color-primary);
+  padding: 4px;
+  border-radius: 3px;
+}
+
+.map-search-container .container-header .filter-button {
+  background-color: rgba(0, 0, 255, 0.25);
+}
+
+.map-search-container .container-header .filter-button:hover {
+  background-color: rgba(0, 0, 255, 0.35);
+}
+
+.map-search-container .container-header .filter-button:active {
+  transform: scale(0.98);
+}
+
+.map-search-container .container-header .create-button {
+  background-color: var(--color-secondary);
+}
+
+.map-search-container .container-header .create-button:hover {
+  background-color: var(--color-secondary-drk);
+}
+
+.map-search-container .container-header .create-button:active {
+  transform: scale(0.98);
+}
+
+.results-container {
+  width: 100%;
+  max-height: calc(100% - 100px);
+  overflow: auto;
+  border-top: 3px solid #ccc;
+}
+
+.results-container .card,
+.card-info,
+.location-container,
+.more-card-info {
+  display: flex;
+  align-items: center;
+}
+
+.results-container .card .card-info h2 {
+  font-weight: 700;
+}
+
+.results-container .card {
+  padding: 1rem 2rem;
+  justify-content: space-between;
+}
+
+.grave-type-circle {
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  align-items: center;
+  line-height: 40px;
+  margin-right: 6px;
+}
+
+.apartment-type {
+  background-color: rgba(0, 255, 0, 0.5);
+}
+
+.bone-vault-type {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.lawn-type {
+  background-color: rgba(255, 165, 0, 0.5);
+}
+
+.location-container {
+  margin-top: 6px;
+  color: blue;
+}
+
+.location-container i {
+  color: red;
+  font-size: 18px;
+  margin-right: 6px;
+}
+
+.results-container .card .right-arrow {
+  font-size: 18px;
+  padding: 1rem;
+}
+
+.floating-card {
+  background-color: #fff;
+  border-radius: 6px;
+  max-width: 400px;
+  min-width: 350px;
+  height: fit-content;
+}
+
+.floating-card .card-info {
+  padding: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.floating-card .card-info .dates {
+  margin-top: 6px;
+}
+
+.floating-card .card-info .bx {
+  text-align: right;
+  font-size: 18px;
+}
+
+.more-card-info {
+  padding: 2rem;
+  border-top: 3px solid var(--color-primary);
+  height: 86px;
+}
+
+.more-card-info .chip {
+  padding: 1rem;
+  border-radius: 3px;
+}
+
+.map-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 6px;
+}
+
+.map-controls .bx {
+  padding: 1rem;
+  background-color: #fff;
+  font-size: 18px;
+}
+
+.map-controls .bx:hover {
+  background-color: #ddd;
+}
+
+.map-controls .bx-plus {
+  border-bottom: 2px solid #ccc;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.map-controls .bx-minus {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}

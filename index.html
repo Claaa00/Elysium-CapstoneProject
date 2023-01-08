@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link
+      rel="stylesheet"
+      href="http://meyerweb.com/eric/tools/css/reset/reset.css"
+    />
+
+    <link rel="stylesheet" href="/src/css/main.css" />
+    <link rel="stylesheet" href="/src/css/login.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <title>Elysium</title>
+  </head>
+
+  <body>
+    <div class="container login-container">
+      <div class="login-form-container main-padding" id="loginForm">
+        <span class="logo-container"
+          ><small class="logo"
+            ><img
+              src="/src/img/e-removebg-preview.png"
+              alt="Elysium Logo"
+              width="20"
+              height="20"
+            />
+            <strong translate="no">lysium</strong></small
+          >
+          <small class="cemetery-name">Binan City Cemetery</small></span
+        >
+
+        <h1 class="form-label">Login</h1>
+
+        <form>
+          <div class="input-group">
+            <input
+              type="text"
+              id="inputUsername"
+              name="input-username"
+              class="input login-input"
+              autofocus
+              autocomplete="off"
+              placeholder="Username"
+              required
+            />
+
+            <div class="error-message username-error">
+              This field cannot be empty!
+            </div>
+          </div>
+
+          <div class="input-group">
+            <input
+              type="password"
+              id="inputPassword"
+              name="input-password"
+              class="input login-input"
+              autofocus
+              autocomplete="off"
+              placeholder="Password"
+              required
+            />
+
+            <div class="error-message password-error">
+              This field cannot be empty!
+            </div>
+          </div>
+
+          <div class="link forgot-password-link">
+            <a href="/" class="forgot-password" id="forgotPasswordLink"
+              >Forgot password?</a
+            >
+          </div>
+
+          <div class="login-validation-error-message">
+            Incorrect username and/or password. <br />
+            Please try again.
+          </div>
+
+          <input
+            type="submit"
+            value="Login"
+            class="button login-btn disabled"
+            aria-disabled="true"
+          />
+
+          <div class="link go-to-website-link">
+            <a href="dashboard.html" class="go-to-website">Go to website</a>
+          </div>
+        </form>
+      </div>
+
+      <!-- 
+        NOTE:
+
+        Pag pinindot yung forgot password na link, 
+        kaya bang may mag s send ng password recovery link or 
+        something sa email nung cemetery tapos sa link 
+        na binigay nun ma aaccess yung link para 
+        makapunta sa forget password na page??
+        
+       -->
+
+      <div
+        class="forgot-password-form-container main-padding hidden"
+        id="forgotPasswordForm"
+      >
+        <span class="logo-container"
+          ><small class="logo"
+            ><img
+              src="/src/img/e-removebg-preview.png"
+              alt="Elysium Logo"
+              width="20"
+              height="20"
+            />
+            <strong translate="no">lysium</strong></small
+          >
+          <small class="cemetery-name">Binan City Cemetery</small></span
+        >
+
+        <h1 class="form-label">Forgot Password</h1>
+
+        <form>
+          <div class="input-group">
+            <input
+              type="password"
+              id="inputNewPassword"
+              name="input-new-password"
+              class="input"
+              autofocus
+              autocomplete="off"
+              placeholder="Password"
+              required
+            />
+
+            <div class="error-message new-password-error">
+              <div class="title">Must contain:</div>
+              <div id="length" class="invalid">
+                <span class="bullet">&#8226;</span> Atleast 8 characters
+              </div>
+              <div id="lowercase" class="invalid">
+                <span class="bullet">&#8226;</span> A lowercase
+              </div>
+              <div id="uppercase" class="invalid">
+                <span class="bullet">&#8226;</span> An uppercase
+              </div>
+              <div id="number" class="invalid">
+                <span class="bullet">&#8226;</span> A number
+              </div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <input
+              type="password"
+              id="RetypeNewPassword"
+              name="retype-new-password"
+              class="input"
+              autofocus
+              autocomplete="off"
+              placeholder="Confirm Password"
+              required
+            />
+
+            <div class="error-message retype-password-error">
+              Passwords do not match!
+            </div>
+          </div>
+
+          <!-- <div class="link forgot-password-link">
+            <a href="/" class="forgot-password">Forgot password?</a>
+          </div> -->
+
+          <!-- <div class="login-validation-error-message"></div> -->
+
+          <input
+            type="submit"
+            value="Save new password"
+            class="button submit-new-password-btn disabled"
+            aria-disabled="true"
+          />
+
+          <div class="link login-link">
+            <a href="/" class="login" id="loginLink">Login</a>
+          </div>
+
+          <div class="link go-to-website-link">
+            <a href="dashboard.html" class="go-to-website">Go to website</a>
+          </div>
+        </form>
+      </div>
+
+      <div class="cover-image-container"></div>
+    </div>
+
+    <script src="/src/js/login.js"></script>
+  </body>
+</html>
