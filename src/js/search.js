@@ -44,7 +44,7 @@ function performAllSearch() {
 // declare elements
 const allSearchBox = document.querySelector("#all-table-search-box");
 const allTable = document.querySelector("#all-records-table");
-const alltrs = allTable.tBodies[0].getElementsByTagName("tr");
+// const alltrs = allTable.tBodies[0].getElementsByTagName("tr");
 
 // add event listener to search box
 allSearchBox.addEventListener("keyup", performAllSearch);
@@ -255,3 +255,54 @@ const arctrs = arcTable.tBodies[0].getElementsByTagName("tr");
 
 // add event listener to search box
 arcSearchBox.addEventListener("keyup", performArcSearch);
+
+// Search in Recent Activities
+function toggleRecSearchBox() {
+  var x = document.querySelector("#rec-table-search-box");
+  var z = document.querySelector(".rec-search-icon");
+  var a = document.querySelector(".rec-close-icon");
+
+  if (x.style.display !== "none") {
+    x.style.display = "none";
+    z.style.display = "block";
+    a.style.display = "none";
+  } else {
+    x.style.display = "flex";
+    z.style.display = "none";
+    a.style.display = "block";
+  }
+}
+
+function performRecSearch() {
+  // Declare search string
+  var filter = recSearchBox.value.toUpperCase();
+
+  // Loop through first tbody's rows
+  for (var rowI = 0; rowI < rectrs.length; rowI++) {
+    // define the row's cells
+    var tds = rectrs[rowI].getElementsByTagName("td");
+
+    // hide the row
+    rectrs[rowI].style.display = "none";
+
+    // loop through row cells
+    for (var cellI = 0; cellI < tds.length; cellI++) {
+      // if there's a match
+      if (tds[cellI].innerHTML.toUpperCase().indexOf(filter) > -1) {
+        // show the row
+        rectrs[rowI].style.display = "";
+
+        // skip to the next row
+        continue;
+      }
+    }
+  }
+}
+
+// declare elements
+const recSearchBox = document.querySelector("#rec-table-search-box");
+const recTable = document.querySelector("#rec-records-table");
+const rectrs = recTable.tBodies[0].getElementsByTagName("tr");
+
+// add event listener to search box
+recSearchBox.addEventListener("keyup", performRecSearch);

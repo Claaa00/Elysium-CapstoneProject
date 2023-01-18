@@ -298,14 +298,17 @@
             <div class="button-group">
               <input
                 type="search"
-                id="table-search-box"
+                id="rec-table-search-box"
                 placeholder="Search..."
                 style="display: none"
               />
 
-              <button class="search-button button" onclick="toggleSearchBox()">
-                <i class="bx bx-search search-icon"></i>
-                <i class="bx bx-x close-icon" style="display: none"></i>
+              <button
+                class="search-button button"
+                onclick="toggleRecSearchBox()"
+              >
+                <i class="bx bx-search rec-search-icon"></i>
+                <i class="bx bx-x rec-close-icon" style="display: none"></i>
               </button>
 
               <button class="download-button button">
@@ -318,7 +321,7 @@
             </div>
 
             <div class="table-container settings-table-container">
-              <table class="records-table" id="records-table">
+              <table class="records-table" id="rec-records-table">
                 <thead>
                   <tr>
                     <th class="string-header-sort id-sort">ID</th>
@@ -341,7 +344,7 @@
                     <td class="string-body-sort">
                       <div class="chip orange-chip">Apartment</div>
                     </td>
-                    <td>Blk 1, Apt D, Div 2, 2B</td>
+                    <td>Block A, B2</td>
                     <td class="mdate-body-sort">11/19/2010</td>
                   </tr>
 
@@ -353,7 +356,7 @@
                     <td class="string-body-sort">
                       <div class="chip green-chip">Lawn</div>
                     </td>
-                    <td>Blk 1, Apt D, Div 2, 2B</td>
+                    <td>Block A, B2</td>
                     <td class="mdate-body-sort">11/19/2011</td>
                   </tr>
 
@@ -365,7 +368,7 @@
                     <td class="string-body-sort">
                       <div class="chip red-chip">Bone Vault</div>
                     </td>
-                    <td>Blk 1, Apt D, Div 2, 2B</td>
+                    <td>Block A, B2</td>
                     <td class="mdate-body-sort">11/19/2012</td>
                   </tr>
 
@@ -377,7 +380,7 @@
                     <td class="string-body-sort">
                       <div class="chip orange-chip">Apartment</div>
                     </td>
-                    <td>Blk 1, Apt D, Div 2, 2B</td>
+                    <td>Block A, B2</td>
                     <td class="mdate-body-sort">11/19/2013</td>
                   </tr>
 
@@ -389,7 +392,7 @@
                     <td class="string-body-sort">
                       <div class="chip orange-chip">Apartment</div>
                     </td>
-                    <td>Blk 1, Apt D, Div 2, 2B</td>
+                    <td>Block A, B2</td>
                     <td class="mdate-body-sort">11/19/2014</td>
                   </tr>
 
@@ -401,7 +404,7 @@
                     <td class="string-body-sort">
                       <div class="chip green-chip">Lawn</div>
                     </td>
-                    <td>Blk 1, Apt D, Div 2, 2B</td>
+                    <td>Block A, B2</td>
                     <td class="mdate-body-sort">11/19/2015</td>
                   </tr>
 
@@ -413,7 +416,7 @@
                     <td class="string-body-sort">
                       <div class="chip orange-chip">Apartment</div>
                     </td>
-                    <td>Blk 1, Apt D, Div 2, 2B</td>
+                    <td>Block A, B2</td>
                     <td class="mdate-body-sort">11/19/2016</td>
                   </tr>
 
@@ -425,7 +428,7 @@
                     <td class="string-body-sort">
                       <div class="chip red-chip">Bone Vault</div>
                     </td>
-                    <td>Blk 1, Apt D, Div 2, 2B</td>
+                    <td>Block A, B2</td>
                     <td class="mdate-body-sort">11/19/2017</td>
                   </tr>
 
@@ -437,7 +440,7 @@
                     <td class="string-body-sort">
                       <div class="chip red-chip">Bone Vault</div>
                     </td>
-                    <td>Blk 1, Apt D, Div 2, 2B</td>
+                    <td>Block A, B2</td>
                     <td class="mdate-body-sort">11/19/2018</td>
                   </tr>
                 </tbody>
