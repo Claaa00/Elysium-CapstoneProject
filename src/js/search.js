@@ -15,39 +15,14 @@ function toggleAllSearchBox() {
   }
 }
 
-function performAllSearch() {
-  // Declare search string
-  var filter = allSearchBox.value.toUpperCase();
-
-  // Loop through first tbody's rows
-  for (var rowI = 0; rowI < alltrs.length; rowI++) {
-    // define the row's cells
-    var tds = alltrs[rowI].getElementsByTagName("td");
-
-    // hide the row
-    alltrs[rowI].style.display = "none";
-
-    // loop through row cells
-    for (var cellI = 0; cellI < tds.length; cellI++) {
-      // if there's a match
-      if (tds[cellI].innerHTML.toUpperCase().indexOf(filter) > -1) {
-        // show the row
-        alltrs[rowI].style.display = "";
-
-        // skip to the next row
-        continue;
-      }
-    }
-  }
-}
-
-// declare elements
-const allSearchBox = document.querySelector("#all-table-search-box");
-const allTable = document.querySelector("#all-records-table");
-// const alltrs = allTable.tBodies[0].getElementsByTagName("tr");
-
-// add event listener to search box
-allSearchBox.addEventListener("keyup", performAllSearch);
+$(document).ready(function () {
+  $("#all-table-search-box").on("keyup", function () {
+    var value = $(this).val().toLowerCase();
+    $("#all-records-table tr").filter(function () {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+    });
+  });
+});
 
 // Search in Apartment tab
 function toggleAptSearchBox() {
@@ -66,42 +41,16 @@ function toggleAptSearchBox() {
   }
 }
 
-function performAptSearch() {
-  // Declare search string
-  var filter = aptSearchBox.value.toUpperCase();
-
-  // Loop through first tbody's rows
-  for (var rowI = 0; rowI < apttrs.length; rowI++) {
-    // define the row's cells
-    var tds = apttrs[rowI].getElementsByTagName("td");
-
-    // hide the row
-    apttrs[rowI].style.display = "none";
-
-    // loop through row cells
-    for (var cellI = 0; cellI < tds.length; cellI++) {
-      // if there's a match
-      if (tds[cellI].innerHTML.toUpperCase().indexOf(filter) > -1) {
-        // show the row
-        apttrs[rowI].style.display = "";
-
-        // skip to the next row
-        continue;
-      }
-    }
-  }
-}
-
-// declare elements
-const aptSearchBox = document.querySelector("#apt-table-search-box");
-const aptTable = document.querySelector("#apt-records-table");
-const apttrs = aptTable.tBodies[0].getElementsByTagName("tr");
-
-// add event listener to search box
-aptSearchBox.addEventListener("keyup", performAptSearch);
+$(document).ready(function () {
+  $("#apt-table-search-box").on("keyup", function () {
+    var value = $(this).val().toLowerCase();
+    $("#apt-records-table tr").filter(function () {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+    });
+  });
+});
 
 // Search in Lawn tab
-
 function toggleLwnSearchBox() {
   var x = document.querySelector("#lwn-table-search-box");
   var z = document.querySelector(".lwn-search-icon");
@@ -118,42 +67,16 @@ function toggleLwnSearchBox() {
   }
 }
 
-function performLwnSearch() {
-  // Declare search string
-  var filter = lwnSearchBox.value.toUpperCase();
-
-  // Loop through first tbody's rows
-  for (var rowI = 0; rowI < lwntrs.length; rowI++) {
-    // define the row's cells
-    var tds = lwntrs[rowI].getElementsByTagName("td");
-
-    // hide the row
-    lwntrs[rowI].style.display = "none";
-
-    // loop through row cells
-    for (var cellI = 0; cellI < tds.length; cellI++) {
-      // if there's a match
-      if (tds[cellI].innerHTML.toUpperCase().indexOf(filter) > -1) {
-        // show the row
-        lwntrs[rowI].style.display = "";
-
-        // skip to the next row
-        continue;
-      }
-    }
-  }
-}
-
-// declare elements
-const lwnSearchBox = document.querySelector("#lwn-table-search-box");
-const lwnTable = document.querySelector("#lwn-records-table");
-const lwntrs = lwnTable.tBodies[0].getElementsByTagName("tr");
-
-// add event listener to search box
-lwnSearchBox.addEventListener("keyup", performLwnSearch);
+$(document).ready(function () {
+  $("#lwn-table-search-box").on("keyup", function () {
+    var value = $(this).val().toLowerCase();
+    $("#lwn-records-table tr").filter(function () {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+    });
+  });
+});
 
 // Search in Bone Vault tab
-
 function toggleBvSearchBox() {
   var x = document.querySelector("#bv-table-search-box");
   var z = document.querySelector(".bv-search-icon");
@@ -170,42 +93,16 @@ function toggleBvSearchBox() {
   }
 }
 
-function performBvSearch() {
-  // Declare search string
-  var filter = bvSearchBox.value.toUpperCase();
-
-  // Loop through first tbody's rows
-  for (var rowI = 0; rowI < bvtrs.length; rowI++) {
-    // define the row's cells
-    var tds = bvtrs[rowI].getElementsByTagName("td");
-
-    // hide the row
-    bvtrs[rowI].style.display = "none";
-
-    // loop through row cells
-    for (var cellI = 0; cellI < tds.length; cellI++) {
-      // if there's a match
-      if (tds[cellI].innerHTML.toUpperCase().indexOf(filter) > -1) {
-        // show the row
-        bvtrs[rowI].style.display = "";
-
-        // skip to the next row
-        continue;
-      }
-    }
-  }
-}
-
-// declare elements
-const bvSearchBox = document.querySelector("#bv-table-search-box");
-const bvTable = document.querySelector("#bv-records-table");
-const bvtrs = bvTable.tBodies[0].getElementsByTagName("tr");
-
-// add event listener to search box
-bvSearchBox.addEventListener("keyup", performBvSearch);
+$(document).ready(function () {
+  $("#bv-table-search-box").on("keyup", function () {
+    var value = $(this).val().toLowerCase();
+    $("#bv-records-table tr").filter(function () {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+    });
+  });
+});
 
 // Search in Archived tab
-
 function toggleArcSearchBox() {
   var x = document.querySelector("#arc-table-search-box");
   var z = document.querySelector(".arc-search-icon");
@@ -222,39 +119,14 @@ function toggleArcSearchBox() {
   }
 }
 
-function performArcSearch() {
-  // Declare search string
-  var filter = arcSearchBox.value.toUpperCase();
-
-  // Loop through first tbody's rows
-  for (var rowI = 0; rowI < arctrs.length; rowI++) {
-    // define the row's cells
-    var tds = arctrs[rowI].getElementsByTagName("td");
-
-    // hide the row
-    arctrs[rowI].style.display = "none";
-
-    // loop through row cells
-    for (var cellI = 0; cellI < tds.length; cellI++) {
-      // if there's a match
-      if (tds[cellI].innerHTML.toUpperCase().indexOf(filter) > -1) {
-        // show the row
-        arctrs[rowI].style.display = "";
-
-        // skip to the next row
-        continue;
-      }
-    }
-  }
-}
-
-// declare elements
-const arcSearchBox = document.querySelector("#arc-table-search-box");
-const arcTable = document.querySelector("#arc-records-table");
-const arctrs = arcTable.tBodies[0].getElementsByTagName("tr");
-
-// add event listener to search box
-arcSearchBox.addEventListener("keyup", performArcSearch);
+$(document).ready(function () {
+  $("#arc-table-search-box").on("keyup", function () {
+    var value = $(this).val().toLowerCase();
+    $("#arc-records-table tr").filter(function () {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+    });
+  });
+});
 
 // Search in Recent Activities
 function toggleRecSearchBox() {
@@ -273,36 +145,11 @@ function toggleRecSearchBox() {
   }
 }
 
-function performRecSearch() {
-  // Declare search string
-  var filter = recSearchBox.value.toUpperCase();
-
-  // Loop through first tbody's rows
-  for (var rowI = 0; rowI < rectrs.length; rowI++) {
-    // define the row's cells
-    var tds = rectrs[rowI].getElementsByTagName("td");
-
-    // hide the row
-    rectrs[rowI].style.display = "none";
-
-    // loop through row cells
-    for (var cellI = 0; cellI < tds.length; cellI++) {
-      // if there's a match
-      if (tds[cellI].innerHTML.toUpperCase().indexOf(filter) > -1) {
-        // show the row
-        rectrs[rowI].style.display = "";
-
-        // skip to the next row
-        continue;
-      }
-    }
-  }
-}
-
-// declare elements
-const recSearchBox = document.querySelector("#rec-table-search-box");
-const recTable = document.querySelector("#rec-records-table");
-const rectrs = recTable.tBodies[0].getElementsByTagName("tr");
-
-// add event listener to search box
-recSearchBox.addEventListener("keyup", performRecSearch);
+$(document).ready(function () {
+  $("#rec-table-search-box").on("keyup", function () {
+    var value = $(this).val().toLowerCase();
+    $("#rec-records-table tr").filter(function () {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+    });
+  });
+});
