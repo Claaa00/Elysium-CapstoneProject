@@ -114,195 +114,178 @@
         </header>
 
         <div class="map-main-container">
-          <!-- map background PLSSSSS -->
+          <div class="map-search-container">
+            <div class="map-search-top-container">
+              <h2 class="map-search-label">Find record location</h2>
 
-          <div class="map-search-container container-shadow">
-            <div class="container-header">
-              <input
-                type="search"
-                id="map-search-box"
-                placeholder="Search for name..."
-              />
+              <div class="map-searchbox-container">
+                <form class="map-search-form">
+                  <input
+                    type="search"
+                    class="search-bar"
+                    placeholder="Search for records.."
+                  />
+                </form>
 
-              <i
-                class="bx bx-plus create-button"
-                onclick="openCreateOverlay()"
-              ></i>
-            </div>
+                <!-- <i class="bx bx-filter-alt"></i> -->
 
-            <div class="results-container">
-              <div class="card">
-                <div class="card-info">
-                  <div class="grave-type-circle apartment-type">
-                    <h2 class="apartment">A</h2>
-                  </div>
-
-                  <div class="card-data">
-                    <strong class="name">Juan Tamad</strong>
-                    <div class="location-container">
-                      <i class="bx bxs-map"></i>
-                      <p class="location">Blk 1, Apt B, Div 2, 2B</p>
-                    </div>
-                  </div>
-                </div>
-
-                <i class="bx bxs-chevron-right right-arrow"></i>
-              </div>
-
-              <div class="card">
-                <div class="card-info">
-                  <div class="grave-type-circle apartment-type">
-                    <h2 class="apartment">A</h2>
-                  </div>
-
-                  <div class="card-data">
-                    <strong class="name">Juan Tamad</strong>
-                    <div class="location-container">
-                      <i class="bx bxs-map"></i>
-                      <p class="location">Blk 1, Apt B, Div 2, 2B</p>
-                    </div>
-                  </div>
-                </div>
-
-                <i class="bx bxs-chevron-right right-arrow"></i>
-              </div>
-
-              <div class="card">
-                <div class="card-info">
-                  <div class="grave-type-circle bone-vault-type">
-                    <h2 class="bone-vault">B</h2>
-                  </div>
-
-                  <div class="card-data">
-                    <strong class="name">Juan Tamad</strong>
-                    <div class="location-container">
-                      <i class="bx bxs-map"></i>
-                      <p class="location">Blk 1, Apt B, Div 2, 2B</p>
-                    </div>
-                  </div>
-                </div>
-
-                <i class="bx bxs-chevron-right right-arrow"></i>
-              </div>
-
-              <div class="card">
-                <div class="card-info">
-                  <div class="grave-type-circle apartment-type">
-                    <h2 class="apartment">A</h2>
-                  </div>
-
-                  <div class="card-data">
-                    <strong class="name">Juan Tamad</strong>
-                    <div class="location-container">
-                      <i class="bx bxs-map"></i>
-                      <p class="location">Blk 1, Apt B, Div 2, 2B</p>
-                    </div>
-                  </div>
-                </div>
-
-                <i class="bx bxs-chevron-right right-arrow"></i>
-              </div>
-
-              <div class="card">
-                <div class="card-info">
-                  <div class="grave-type-circle bone-vault-type">
-                    <h2 class="bone-vault">B</h2>
-                  </div>
-
-                  <div class="card-data">
-                    <strong class="name">Juan Tamad</strong>
-                    <div class="location-container">
-                      <i class="bx bxs-map"></i>
-                      <p class="location">Blk 1, Apt B, Div 2, 2B</p>
-                    </div>
-                  </div>
-                </div>
-
-                <i class="bx bxs-chevron-right right-arrow"></i>
-              </div>
-
-              <div class="card">
-                <div class="card-info">
-                  <div class="grave-type-circle lawn-type">
-                    <h2 class="lawn">L</h2>
-                  </div>
-
-                  <div class="card-data">
-                    <strong class="name">Juan Tamad</strong>
-                    <div class="location-container">
-                      <i class="bx bxs-map"></i>
-                      <p class="location">Blk 1, Apt B, Div 2, 2B</p>
-                    </div>
-                  </div>
-                </div>
-
-                <i class="bx bxs-chevron-right right-arrow"></i>
-              </div>
-
-              <div class="card">
-                <div class="card-info">
-                  <div class="grave-type-circle apartment-type">
-                    <h2 class="apartment">A</h2>
-                  </div>
-
-                  <div class="card-data">
-                    <strong class="name">Juan Tamad</strong>
-                    <div class="location-container">
-                      <i class="bx bxs-map"></i>
-                      <p class="location">Blk 1, Apt B, Div 2, 2B</p>
-                    </div>
-                  </div>
-                </div>
-
-                <i class="bx bxs-chevron-right right-arrow"></i>
-              </div>
-
-              <div class="card">
-                <div class="card-info">
-                  <div class="grave-type-circle lawn-type">
-                    <h2 class="lawn">L</h2>
-                  </div>
-
-                  <div class="card-data">
-                    <strong class="name">Juan Tamad</strong>
-                    <div class="location-container">
-                      <i class="bx bxs-map"></i>
-                      <p class="location">Blk 1, Apt B, Div 2, 2B</p>
-                    </div>
-                  </div>
-                </div>
-
-                <i class="bx bxs-chevron-right right-arrow"></i>
+                <i class="bx bx-plus" onclick="openCreateOverlay()"></i>
               </div>
             </div>
-          </div>
 
-          <div class="floating-card container-shadow">
-            <div class="card-info apartment-type">
-              <div class="card-data">
-                <h1 class="name">Juan Tamad</h1>
-                <p class="dates">
-                  <span class="bdate">Nov 01 1995</span> -
-                  <span class="ddate">Nov 02 2020</span>
-                </p>
+            <div class="map-search-result-container">
+              <div class="card">
+                <div class="card-top-group">
+                  <div class="card-main-info">
+                    <i class="bx bxs-map apartment-type"></i>
+
+                    <h3 class="record-name">Juan Tamad</h3>
+                  </div>
+
+                  <i
+                    class="bx bx-chevron-right back"
+                    onclick="openMapCardOverlay()"
+                  ></i>
+                </div>
+
+                <div class="card-sub-info">
+                  <div class="location-info-container info">
+                    Location: <span class="location-info">Block A, B2</span>
+                  </div>
+
+                  <div class="grave-type-info-container info">
+                    Grave Type: <span class="grave-type-info">Apartment</span>
+                  </div>
+
+                  <div class="dates-info-container info hidden">
+                    <span class="dob">11/01/1995</span> -
+                    <span class="dod">11/02/2020</span>
+                  </div>
+                </div>
               </div>
 
-              <i class="bx bx-x-circle"></i>
-            </div>
+              <div class="card">
+                <div class="card-top-group">
+                  <div class="card-main-info">
+                    <i class="bx bxs-map apartment-type"></i>
 
-            <div class="more-card-info">
-              <div class="chip green-chip">Apartment</div>
+                    <h3 class="record-name">Juan Tamad</h3>
+                  </div>
 
-              <div class="location-container">
-                <i class="bx bxs-map"></i>
-                <p class="location">Blk 1, Apt B, Div 2, 2B</p>
+                  <i class="bx bx-chevron-right back"></i>
+                </div>
+
+                <div class="card-sub-info">
+                  <div class="location-info-container info">
+                    Location: <span class="location-info">Block A, B2</span>
+                  </div>
+
+                  <div class="grave-type-info-container info">
+                    Grave Type: <span class="grave-type-info">Apartment</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-top-group">
+                  <div class="card-main-info">
+                    <i class="bx bxs-map apartment-type"></i>
+
+                    <h3 class="record-name">Juan Tamad</h3>
+                  </div>
+
+                  <i class="bx bx-chevron-right back"></i>
+                </div>
+
+                <div class="card-sub-info">
+                  <div class="location-info-container info">
+                    Location: <span class="location-info">Block A, B2</span>
+                  </div>
+
+                  <div class="grave-type-info-container info">
+                    Grave Type: <span class="grave-type-info">Apartment</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-top-group">
+                  <div class="card-main-info">
+                    <i class="bx bxs-map apartment-type"></i>
+
+                    <h3 class="record-name">Juan Tamad</h3>
+                  </div>
+
+                  <i class="bx bx-chevron-right back"></i>
+                </div>
+
+                <div class="card-sub-info">
+                  <div class="location-info-container info">
+                    Location: <span class="location-info">Block A, B2</span>
+                  </div>
+
+                  <div class="grave-type-info-container info">
+                    Grave Type: <span class="grave-type-info">Apartment</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-top-group">
+                  <div class="card-main-info">
+                    <i class="bx bxs-map apartment-type"></i>
+
+                    <h3 class="record-name">Juan Tamad</h3>
+                  </div>
+
+                  <i class="bx bx-chevron-right back"></i>
+                </div>
+
+                <div class="card-sub-info">
+                  <div class="location-info-container info">
+                    Location: <span class="location-info">Block A, B2</span>
+                  </div>
+
+                  <div class="grave-type-info-container info">
+                    Grave Type: <span class="grave-type-info">Apartment</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-top-group">
+                  <div class="card-main-info">
+                    <i class="bx bxs-map apartment-type"></i>
+
+                    <h3 class="record-name">Juan Tamad</h3>
+                  </div>
+
+                  <i class="bx bx-chevron-right back"></i>
+                </div>
+
+                <div class="card-sub-info">
+                  <div class="location-info-container info">
+                    Location: <span class="location-info">Block A, B2</span>
+                  </div>
+
+                  <div class="grave-type-info-container info">
+                    Grave Type: <span class="grave-type-info">Apartment</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="map-controls container-shadow">
-            <i class="bx bx-plus"></i>
-            <i class="bx bx-minus"></i>
+          <div class="map-map-container">
+            <img
+              src="/src/img/315520173_1377583026319664_4971874567840211276_n.jpg"
+              alt="map"
+            />
+
+            <div class="map-controls container-shadow">
+              <i class="bx bx-plus"></i>
+              <i class="bx bx-minus"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -318,29 +301,39 @@
 
         <div class="overlay-details">
           <form class="overlay-form create-record-form">
+            <div class="error-message" style="display: none">
+              Please fill in valid value for all required fields
+            </div>
+
             <fieldset class="input-group-container">
               <legend class="input-group-name">Interment Profile</legend>
 
               <div class="input-group">
                 <div class="input-pair">
-                  <label for="first-name">First Name</label>
+                  <label for="first-name"
+                    >First Name <span class="required">[Required]</span></label
+                  >
 
                   <input
                     type="text"
                     name="first-name"
                     id="first-name"
                     placeholder="Enter first name"
+                    required
                   />
                 </div>
 
                 <div class="input-pair">
-                  <label for="last-name">Last Name</label>
+                  <label for="last-name"
+                    >Last Name <span class="required">[Required]</span></label
+                  >
 
                   <input
                     type="text"
                     name="last-name"
                     id="last-name"
                     placeholder="Enter last name"
+                    required
                   />
                 </div>
               </div>
@@ -370,53 +363,36 @@
 
               <div class="input-group">
                 <div class="input-pair">
-                  <label for="grave-type-input">Grave Type</label>
+                  <label for="grave-type-input"
+                    >Grave Type <span class="required">[Required]</span></label
+                  >
 
-                  <select name="grave-type-input" id="grave-type-input">
-                    <option value="apartment">Apartment</option>
-                    <option value="lawn">Lawn</option>
-                    <option value="bone-vault">Bone Vault</option>
+                  <select
+                    name="grave-type-input"
+                    id="grave-type-input"
+                    required
+                  >
+                    <option value="">Choose...</option>
+                    <option value="apartment-type-form">Apartment</option>
+                    <option value="lawn-type-form">Lawn</option>
+                    <option value="bone-vault-type-form">Bone Vault</option>
                   </select>
                 </div>
               </div>
 
-              <div class="input-group">
+              <div
+                class="input-group grave-type-option"
+                id="bone-vault-type-form"
+                name="bone-vault-type-form"
+                style="display: none"
+              >
                 <div class="input-pair">
-                  <label for="block-input">Block</label>
+                  <label for="block-input"
+                    >Bone Block <span class="required">[Required]</span></label
+                  >
 
-                  <select name="block-input" id="block-input">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                  </select>
-                </div>
-
-                <div class="input-pair">
-                  <label for="apartment-input">Apartment</label>
-
-                  <select name="apartment-input" id="apartment-input">
-                    <option value="a">A</option>
-                    <option value="b">B</option>
-                    <option value="c">C</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="input-group">
-                <div class="input-pair">
-                  <label for="division-input">Division</label>
-
-                  <select name="division-input" id="division-input">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                  </select>
-                </div>
-
-                <div class="input-pair">
-                  <label for="column-input">Column</label>
-
-                  <select name="column-input" id="column-input">
+                  <select name="block-input" id="bv-block-input" required>
+                    <option value="">Choose...</option>
                     <option value="a">A</option>
                     <option value="b">B</option>
                     <option value="c">C</option>
@@ -424,9 +400,117 @@
                 </div>
 
                 <div class="input-pair">
-                  <label for="row-input">Row</label>
+                  <label for="column-input"
+                    >Column <span class="required">[Required]</span></label
+                  >
 
-                  <select name="row-input" id="row-input">
+                  <select name="column-input" id="bv-column-input" required>
+                    <option value="">Choose...</option>
+                    <option value="a">A</option>
+                    <option value="b">B</option>
+                    <option value="c">C</option>
+                  </select>
+                </div>
+
+                <div class="input-pair">
+                  <label for="row-input"
+                    >Row <span class="required">[Required]</span></label
+                  >
+
+                  <select name="row-input" id="bv-row-input" required>
+                    <option value="">Choose...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+              </div>
+
+              <div
+                class="input-group grave-type-option"
+                id="apartment-type-form"
+                name="apartment-type-form"
+                style="display: none"
+              >
+                <div class="input-pair">
+                  <label for="block-input"
+                    >Apt Block <span class="required">[Required]</span></label
+                  >
+
+                  <select name="block-input" id="apt-block-input" required>
+                    <option value="">Choose...</option>
+                    <option value="a">A</option>
+                    <option value="b">B</option>
+                    <option value="c">C</option>
+                  </select>
+                </div>
+
+                <div class="input-pair">
+                  <label for="column-input"
+                    >Column <span class="required">[Required]</span></label
+                  >
+
+                  <select name="column-input" id="apt-column-input" required>
+                    <option value="">Choose...</option>
+                    <option value="a">A</option>
+                    <option value="b">B</option>
+                    <option value="c">C</option>
+                  </select>
+                </div>
+
+                <div class="input-pair">
+                  <label for="row-input"
+                    >Row <span class="required">[Required]</span></label
+                  >
+
+                  <select name="row-input" id="apt-row-input" required>
+                    <option value="">Choose...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+              </div>
+
+              <div
+                class="input-group grave-type-option"
+                id="lawn-type-form"
+                name="lawn-type-form"
+                style="display: none"
+              >
+                <div class="input-pair">
+                  <label for="block-input"
+                    >Lawn Block <span class="required">[Required]</span></label
+                  >
+
+                  <select name="block-input" id="lwn-block-input" required>
+                    <option value="">Choose...</option>
+                    <option value="a">A</option>
+                    <option value="b">B</option>
+                    <option value="c">C</option>
+                  </select>
+                </div>
+
+                <div class="input-pair">
+                  <label for="column-input"
+                    >Column <span class="required">[Required]</span></label
+                  >
+
+                  <select name="column-input" id="lwn-column-input" required>
+                    <option value="">Choose...</option>
+                    <option value="a">A</option>
+                    <option value="b">B</option>
+                    <option value="c">C</option>
+                  </select>
+                </div>
+
+                <div class="input-pair">
+                  <label for="row-input"
+                    >Row <span class="required">[Required]</span></label
+                  >
+
+                  <select name="row-input" id="lwn-row-input" required>
+                    <option value="">Choose...</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -441,11 +525,45 @@
           <button class="cancel-button button" onclick="closeCreateOverlay()">
             Cancel
           </button>
-          <button class="submit-button button">Save Record</button>
+          <button class="submit-button button" onclick="validateForm()">
+            Save Record
+          </button>
         </div>
       </div>
     </div>
 
+    <div class="map-card-overlay container-shadow" style="display: none">
+      <div class="map-card-top-container">
+        <span class="record-id">1234567890</span>
+
+        <span class="grave-type"
+          ><div class="chip green-chip">Apartment</div></span
+        >
+      </div>
+
+      <div class="map-card-info">
+        <strong class="record-name">Juan Tamad</strong>
+
+        <p class="dates">
+          <span class="dob">11/01/1995</span> -
+          <span class="dod">11/02/2020</span>
+        </p>
+
+        <p class="address">Block A, B2</p>
+      </div>
+
+      <div class="map-card-button">
+        <button class="redirect-button button map-button">
+          View in records
+        </button>
+        <button class="close-button map-button" onclick="closeMapCardOverlay()">
+          Close
+        </button>
+      </div>
+    </div>
+
     <script src="/src/js/overlay.js"></script>
+    <script src="/src/js/mapoverlay.js"></script>
+    <script src="/src/js/toggleform.js"></script>
   </body>
 </html>

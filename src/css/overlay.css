@@ -133,3 +133,43 @@ fieldset {
   font-size: 1rem;
   font-weight: 700;
 }
+
+.detailed-view {
+  width: 100%;
+  text-align: left;
+}
+
+.detailed-view tr {
+  background-color: #fff;
+  border: 1px solid #aaa;
+}
+
+.detailed-view th,
+.detailed-view td {
+  padding: 1rem;
+  border-bottom: 1px solid #aaa;
+}
+
+.detailed-view th {
+  background-color: rgba(0, 0, 255, 0.15);
+  font-weight: 600;
+}
+
+.required {
+  color: #aaa;
+}
+
+.input-pair label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error-message {
+  padding: 1rem;
+  background-color: rgba(255, 0, 0, 0.25);
+  color: var(--color-error);
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  border: 1px solid var(--color-error);
+}

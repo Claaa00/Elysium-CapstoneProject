@@ -113,7 +113,11 @@
           </div>
         </header>
 
-        <div class="settings-main-container container-shadow">
+        <div
+          class="settings-main-container container-shadow"
+          id="main"
+          style="display: block"
+        >
           <div class="tab">
             <button class="tab-links" onclick="openLink(event, 'general')">
               General
@@ -136,7 +140,9 @@
                 <div class="setting">
                   <div class="setting-info">
                     <p class="setting-label">Cemetery Name</p>
-                    <h2 class="setting-set">Binan City Cemetery</h2>
+                    <h2 class="setting-set" data-editable>
+                      Binan City Cemetery
+                    </h2>
 
                     <input
                       type="text"
@@ -157,7 +163,9 @@
                 <div class="setting">
                   <div class="setting-info">
                     <p class="setting-label">Profile Name</p>
-                    <h2 class="setting-set">Binan City Cemetery</h2>
+                    <h2 class="setting-set" data-editable>
+                      Binan City Cemetery
+                    </h2>
 
                     <input
                       type="text"
@@ -180,7 +188,7 @@
                 <div class="setting">
                   <div class="setting-info">
                     <p class="setting-label">Username</p>
-                    <h2 class="setting-set">lolololol</h2>
+                    <h2 class="setting-set" data-editable>lolololol</h2>
 
                     <input
                       type="text"
@@ -195,7 +203,7 @@
                 <div class="setting">
                   <div class="setting-info">
                     <p class="setting-label">Password</p>
-                    <h2 class="setting-set">*************</h2>
+                    <h2 class="setting-set" data-editable>*************</h2>
 
                     <input
                       type="password"
@@ -214,7 +222,7 @@
 
               <div class="setting-group">
                 <div class="setting">
-                  <div class="setting-info">
+                  <div class="setting-info" onclick="openRecentActivities()">
                     <p class="setting-label">View Recent Activities</p>
                   </div>
 
@@ -272,6 +280,202 @@
             </div>
           </div>
         </div>
+
+        <div
+          class="settings-main-container container-shadow"
+          id="recents"
+          style="display: none"
+        >
+          <div class="return-button">
+            <span
+              class="return-button-wrapper"
+              onclick="closeRecentActivities()"
+              ><i class="bx bx-chevron-left"></i> Back</span
+            >
+          </div>
+
+          <div class="settings-records-container">
+            <div class="button-group">
+              <input
+                type="search"
+                id="table-search-box"
+                placeholder="Search..."
+                style="display: none"
+              />
+
+              <button class="search-button button" onclick="toggleSearchBox()">
+                <i class="bx bx-search search-icon"></i>
+                <i class="bx bx-x close-icon" style="display: none"></i>
+              </button>
+
+              <button class="download-button button">
+                <i class="bx bxs-download"></i>
+              </button>
+
+              <button class="refresh-button button">
+                <i class="bx bx-refresh"></i>
+              </button>
+            </div>
+
+            <div class="table-container settings-table-container">
+              <table class="records-table" id="records-table">
+                <thead>
+                  <tr>
+                    <th class="string-header-sort id-sort">ID</th>
+                    <th class="string-header-sort name-sort">Name</th>
+                    <th class="bdate-header-sort">Birth Date</th>
+                    <th class="ddate-header-sort">Death Date</th>
+                    <th class="string-header-sort grave-type-sort">
+                      Grave Type
+                    </th>
+                    <th>Location</th>
+                    <th class="mdate-header-sort">Death Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="string-body-sort">1234567890</td>
+                    <td class="string-body-sort">Juan Tamad</td>
+                    <td class="bdate-body-sort">11/01/1995</td>
+                    <td class="ddate-body-sort">11/02/2020</td>
+                    <td class="string-body-sort">
+                      <div class="chip orange-chip">Apartment</div>
+                    </td>
+                    <td>Blk 1, Apt D, Div 2, 2B</td>
+                    <td class="mdate-body-sort">11/19/2010</td>
+                  </tr>
+
+                  <tr>
+                    <td class="string-body-sort">2234567890</td>
+                    <td class="string-body-sort">Mary Paingas</td>
+                    <td class="bdate-body-sort">11/01/1998</td>
+                    <td class="ddate-body-sort">11/02/2017</td>
+                    <td class="string-body-sort">
+                      <div class="chip green-chip">Lawn</div>
+                    </td>
+                    <td>Blk 1, Apt D, Div 2, 2B</td>
+                    <td class="mdate-body-sort">11/19/2011</td>
+                  </tr>
+
+                  <tr>
+                    <td class="string-body-sort">1234567891</td>
+                    <td class="string-body-sort">Elton John Navarro</td>
+                    <td class="bdate-body-sort">11/25/1995</td>
+                    <td class="ddate-body-sort">11/12/2020</td>
+                    <td class="string-body-sort">
+                      <div class="chip red-chip">Bone Vault</div>
+                    </td>
+                    <td>Blk 1, Apt D, Div 2, 2B</td>
+                    <td class="mdate-body-sort">11/19/2012</td>
+                  </tr>
+
+                  <tr>
+                    <td class="string-body-sort">1234567890</td>
+                    <td class="string-body-sort">Judea Nicole Guillen</td>
+                    <td class="bdate-body-sort">06/06/1995</td>
+                    <td class="ddate-body-sort">05/02/2020</td>
+                    <td class="string-body-sort">
+                      <div class="chip orange-chip">Apartment</div>
+                    </td>
+                    <td>Blk 1, Apt D, Div 2, 2B</td>
+                    <td class="mdate-body-sort">11/19/2013</td>
+                  </tr>
+
+                  <tr>
+                    <td class="string-body-sort">1234567890</td>
+                    <td class="string-body-sort">John Russel Derpo</td>
+                    <td class="bdate-body-sort">03/01/1995</td>
+                    <td class="ddate-body-sort">07/02/2020</td>
+                    <td class="string-body-sort">
+                      <div class="chip orange-chip">Apartment</div>
+                    </td>
+                    <td>Blk 1, Apt D, Div 2, 2B</td>
+                    <td class="mdate-body-sort">11/19/2014</td>
+                  </tr>
+
+                  <tr>
+                    <td class="string-body-sort">1234567890</td>
+                    <td class="string-body-sort">Erika Tecson</td>
+                    <td class="bdate-body-sort">11/01/1990</td>
+                    <td class="ddate-body-sort">11/02/2012</td>
+                    <td class="string-body-sort">
+                      <div class="chip green-chip">Lawn</div>
+                    </td>
+                    <td>Blk 1, Apt D, Div 2, 2B</td>
+                    <td class="mdate-body-sort">11/19/2015</td>
+                  </tr>
+
+                  <tr>
+                    <td class="string-body-sort">1234567890</td>
+                    <td class="string-body-sort">Rajap Benavidez</td>
+                    <td class="bdate-body-sort">11/01/1990</td>
+                    <td class="ddate-body-sort">11/02/2000</td>
+                    <td class="string-body-sort">
+                      <div class="chip orange-chip">Apartment</div>
+                    </td>
+                    <td>Blk 1, Apt D, Div 2, 2B</td>
+                    <td class="mdate-body-sort">11/19/2016</td>
+                  </tr>
+
+                  <tr>
+                    <td class="string-body-sort">1234567890</td>
+                    <td class="string-body-sort">Clarence Paingas</td>
+                    <td class="bdate-body-sort">11/03/1995</td>
+                    <td class="ddate-body-sort">11/04/2020</td>
+                    <td class="string-body-sort">
+                      <div class="chip red-chip">Bone Vault</div>
+                    </td>
+                    <td>Blk 1, Apt D, Div 2, 2B</td>
+                    <td class="mdate-body-sort">11/19/2017</td>
+                  </tr>
+
+                  <tr>
+                    <td class="string-body-sort">1234567890</td>
+                    <td class="string-body-sort">Dolores Paingas</td>
+                    <td class="bdate-body-sort">09/01/1995</td>
+                    <td class="ddate-body-sort">08/02/2020</td>
+                    <td class="string-body-sort">
+                      <div class="chip red-chip">Bone Vault</div>
+                    </td>
+                    <td>Blk 1, Apt D, Div 2, 2B</td>
+                    <td class="mdate-body-sort">11/19/2018</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <footer class="table-footer">
+              <div class="items-per-page select">
+                <label for="items-datalist">Items per page</label>
+                <select name="items-datalist" id="items-datalist">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="3">4</option>
+                </select>
+              </div>
+
+              <div class="pagination">
+                <div class="current-page select">
+                  <label for="page-datalist">Page</label>
+                  <select name="page-datalist" id="page-datalist">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="3">4</option>
+                  </select>
+                </div>
+
+                <p class="page-count">of <span class="count">100</span></p>
+
+                <div class="page-control">
+                  <i class="bx bxs-chevron-left"></i>
+                  <i class="bx bxs-chevron-right"></i>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -285,29 +489,39 @@
 
         <div class="overlay-details">
           <form class="overlay-form create-record-form">
+            <div class="error-message" style="display: none">
+              Please fill in valid value for all required fields
+            </div>
+
             <fieldset class="input-group-container">
               <legend class="input-group-name">Interment Profile</legend>
 
               <div class="input-group">
                 <div class="input-pair">
-                  <label for="first-name">First Name</label>
+                  <label for="first-name"
+                    >First Name <span class="required">[Required]</span></label
+                  >
 
                   <input
                     type="text"
                     name="first-name"
                     id="first-name"
                     placeholder="Enter first name"
+                    required
                   />
                 </div>
 
                 <div class="input-pair">
-                  <label for="last-name">Last Name</label>
+                  <label for="last-name"
+                    >Last Name <span class="required">[Required]</span></label
+                  >
 
                   <input
                     type="text"
                     name="last-name"
                     id="last-name"
                     placeholder="Enter last name"
+                    required
                   />
                 </div>
               </div>
@@ -337,53 +551,36 @@
 
               <div class="input-group">
                 <div class="input-pair">
-                  <label for="grave-type-input">Grave Type</label>
+                  <label for="grave-type-input"
+                    >Grave Type <span class="required">[Required]</span></label
+                  >
 
-                  <select name="grave-type-input" id="grave-type-input">
-                    <option value="apartment">Apartment</option>
-                    <option value="lawn">Lawn</option>
-                    <option value="bone-vault">Bone Vault</option>
+                  <select
+                    name="grave-type-input"
+                    id="grave-type-input"
+                    required
+                  >
+                    <option value="">Choose...</option>
+                    <option value="apartment-type-form">Apartment</option>
+                    <option value="lawn-type-form">Lawn</option>
+                    <option value="bone-vault-type-form">Bone Vault</option>
                   </select>
                 </div>
               </div>
 
-              <div class="input-group">
+              <div
+                class="input-group grave-type-option"
+                id="bone-vault-type-form"
+                name="bone-vault-type-form"
+                style="display: none"
+              >
                 <div class="input-pair">
-                  <label for="block-input">Block</label>
+                  <label for="block-input"
+                    >Bone Block <span class="required">[Required]</span></label
+                  >
 
-                  <select name="block-input" id="block-input">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                  </select>
-                </div>
-
-                <div class="input-pair">
-                  <label for="apartment-input">Apartment</label>
-
-                  <select name="apartment-input" id="apartment-input">
-                    <option value="a">A</option>
-                    <option value="b">B</option>
-                    <option value="c">C</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="input-group">
-                <div class="input-pair">
-                  <label for="division-input">Division</label>
-
-                  <select name="division-input" id="division-input">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                  </select>
-                </div>
-
-                <div class="input-pair">
-                  <label for="column-input">Column</label>
-
-                  <select name="column-input" id="column-input">
+                  <select name="block-input" id="bv-block-input" required>
+                    <option value="">Choose...</option>
                     <option value="a">A</option>
                     <option value="b">B</option>
                     <option value="c">C</option>
@@ -391,9 +588,117 @@
                 </div>
 
                 <div class="input-pair">
-                  <label for="row-input">Row</label>
+                  <label for="column-input"
+                    >Column <span class="required">[Required]</span></label
+                  >
 
-                  <select name="row-input" id="row-input">
+                  <select name="column-input" id="bv-column-input" required>
+                    <option value="">Choose...</option>
+                    <option value="a">A</option>
+                    <option value="b">B</option>
+                    <option value="c">C</option>
+                  </select>
+                </div>
+
+                <div class="input-pair">
+                  <label for="row-input"
+                    >Row <span class="required">[Required]</span></label
+                  >
+
+                  <select name="row-input" id="bv-row-input" required>
+                    <option value="">Choose...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+              </div>
+
+              <div
+                class="input-group grave-type-option"
+                id="apartment-type-form"
+                name="apartment-type-form"
+                style="display: none"
+              >
+                <div class="input-pair">
+                  <label for="block-input"
+                    >Apt Block <span class="required">[Required]</span></label
+                  >
+
+                  <select name="block-input" id="apt-block-input" required>
+                    <option value="">Choose...</option>
+                    <option value="a">A</option>
+                    <option value="b">B</option>
+                    <option value="c">C</option>
+                  </select>
+                </div>
+
+                <div class="input-pair">
+                  <label for="column-input"
+                    >Column <span class="required">[Required]</span></label
+                  >
+
+                  <select name="column-input" id="apt-column-input" required>
+                    <option value="">Choose...</option>
+                    <option value="a">A</option>
+                    <option value="b">B</option>
+                    <option value="c">C</option>
+                  </select>
+                </div>
+
+                <div class="input-pair">
+                  <label for="row-input"
+                    >Row <span class="required">[Required]</span></label
+                  >
+
+                  <select name="row-input" id="apt-row-input" required>
+                    <option value="">Choose...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+              </div>
+
+              <div
+                class="input-group grave-type-option"
+                id="lawn-type-form"
+                name="lawn-type-form"
+                style="display: none"
+              >
+                <div class="input-pair">
+                  <label for="block-input"
+                    >Lawn Block <span class="required">[Required]</span></label
+                  >
+
+                  <select name="block-input" id="lwn-block-input" required>
+                    <option value="">Choose...</option>
+                    <option value="a">A</option>
+                    <option value="b">B</option>
+                    <option value="c">C</option>
+                  </select>
+                </div>
+
+                <div class="input-pair">
+                  <label for="column-input"
+                    >Column <span class="required">[Required]</span></label
+                  >
+
+                  <select name="column-input" id="lwn-column-input" required>
+                    <option value="">Choose...</option>
+                    <option value="a">A</option>
+                    <option value="b">B</option>
+                    <option value="c">C</option>
+                  </select>
+                </div>
+
+                <div class="input-pair">
+                  <label for="row-input"
+                    >Row <span class="required">[Required]</span></label
+                  >
+
+                  <select name="row-input" id="lwn-row-input" required>
+                    <option value="">Choose...</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -408,7 +713,9 @@
           <button class="cancel-button button" onclick="closeCreateOverlay()">
             Cancel
           </button>
-          <button class="submit-button button">Save Record</button>
+          <button class="submit-button button" onclick="validateForm()">
+            Save Record
+          </button>
         </div>
       </div>
     </div>
@@ -417,5 +724,8 @@
     <script src="/src/js/tablecheck.js"></script>
     <script src="/src/js/toggletab.js"></script>
     <script src="/src/js/overlay.js"></script>
+    <script src="/src/js/toggleform.js"></script>
+    <script src="/src/js/settings.js"></script>
+    <script src="/src/js/search.js"></script>
   </body>
 </html>

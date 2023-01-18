@@ -27,6 +27,13 @@
       rel="stylesheet"
     />
 
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/src/resources/simple-checkbox-table/dist/jquery.simple-checkbox-table.min.js"></script>
+
     <title>Elysium</title>
   </head>
 
@@ -334,29 +341,39 @@
 
         <div class="overlay-details">
           <form class="overlay-form create-record-form">
+            <div class="error-message" style="display: none">
+              Please fill in valid value for all required fields
+            </div>
+
             <fieldset class="input-group-container">
               <legend class="input-group-name">Interment Profile</legend>
 
               <div class="input-group">
                 <div class="input-pair">
-                  <label for="first-name">First Name</label>
+                  <label for="first-name"
+                    >First Name <span class="required">[Required]</span></label
+                  >
 
                   <input
                     type="text"
                     name="first-name"
                     id="first-name"
                     placeholder="Enter first name"
+                    required
                   />
                 </div>
 
                 <div class="input-pair">
-                  <label for="last-name">Last Name</label>
+                  <label for="last-name"
+                    >Last Name <span class="required">[Required]</span></label
+                  >
 
                   <input
                     type="text"
                     name="last-name"
                     id="last-name"
                     placeholder="Enter last name"
+                    required
                   />
                 </div>
               </div>
@@ -386,53 +403,36 @@
 
               <div class="input-group">
                 <div class="input-pair">
-                  <label for="grave-type-input">Grave Type</label>
+                  <label for="grave-type-input"
+                    >Grave Type <span class="required">[Required]</span></label
+                  >
 
-                  <select name="grave-type-input" id="grave-type-input">
-                    <option value="apartment">Apartment</option>
-                    <option value="lawn">Lawn</option>
-                    <option value="bone-vault">Bone Vault</option>
+                  <select
+                    name="grave-type-input"
+                    id="grave-type-input"
+                    required
+                  >
+                    <option value="">Choose...</option>
+                    <option value="apartment-type-form">Apartment</option>
+                    <option value="lawn-type-form">Lawn</option>
+                    <option value="bone-vault-type-form">Bone Vault</option>
                   </select>
                 </div>
               </div>
 
-              <div class="input-group">
+              <div
+                class="input-group grave-type-option"
+                id="bone-vault-type-form"
+                name="bone-vault-type-form"
+                style="display: none"
+              >
                 <div class="input-pair">
-                  <label for="block-input">Block</label>
+                  <label for="block-input"
+                    >Bone Block <span class="required">[Required]</span></label
+                  >
 
-                  <select name="block-input" id="block-input">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                  </select>
-                </div>
-
-                <div class="input-pair">
-                  <label for="apartment-input">Apartment</label>
-
-                  <select name="apartment-input" id="apartment-input">
-                    <option value="a">A</option>
-                    <option value="b">B</option>
-                    <option value="c">C</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="input-group">
-                <div class="input-pair">
-                  <label for="division-input">Division</label>
-
-                  <select name="division-input" id="division-input">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                  </select>
-                </div>
-
-                <div class="input-pair">
-                  <label for="column-input">Column</label>
-
-                  <select name="column-input" id="column-input">
+                  <select name="block-input" id="bv-block-input" required>
+                    <option value="">Choose...</option>
                     <option value="a">A</option>
                     <option value="b">B</option>
                     <option value="c">C</option>
@@ -440,9 +440,117 @@
                 </div>
 
                 <div class="input-pair">
-                  <label for="row-input">Row</label>
+                  <label for="column-input"
+                    >Column <span class="required">[Required]</span></label
+                  >
 
-                  <select name="row-input" id="row-input">
+                  <select name="column-input" id="bv-column-input" required>
+                    <option value="">Choose...</option>
+                    <option value="a">A</option>
+                    <option value="b">B</option>
+                    <option value="c">C</option>
+                  </select>
+                </div>
+
+                <div class="input-pair">
+                  <label for="row-input"
+                    >Row <span class="required">[Required]</span></label
+                  >
+
+                  <select name="row-input" id="bv-row-input" required>
+                    <option value="">Choose...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+              </div>
+
+              <div
+                class="input-group grave-type-option"
+                id="apartment-type-form"
+                name="apartment-type-form"
+                style="display: none"
+              >
+                <div class="input-pair">
+                  <label for="block-input"
+                    >Apt Block <span class="required">[Required]</span></label
+                  >
+
+                  <select name="block-input" id="apt-block-input" required>
+                    <option value="">Choose...</option>
+                    <option value="a">A</option>
+                    <option value="b">B</option>
+                    <option value="c">C</option>
+                  </select>
+                </div>
+
+                <div class="input-pair">
+                  <label for="column-input"
+                    >Column <span class="required">[Required]</span></label
+                  >
+
+                  <select name="column-input" id="apt-column-input" required>
+                    <option value="">Choose...</option>
+                    <option value="a">A</option>
+                    <option value="b">B</option>
+                    <option value="c">C</option>
+                  </select>
+                </div>
+
+                <div class="input-pair">
+                  <label for="row-input"
+                    >Row <span class="required">[Required]</span></label
+                  >
+
+                  <select name="row-input" id="apt-row-input" required>
+                    <option value="">Choose...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+              </div>
+
+              <div
+                class="input-group grave-type-option"
+                id="lawn-type-form"
+                name="lawn-type-form"
+                style="display: none"
+              >
+                <div class="input-pair">
+                  <label for="block-input"
+                    >Lawn Block <span class="required">[Required]</span></label
+                  >
+
+                  <select name="block-input" id="lwn-block-input" required>
+                    <option value="">Choose...</option>
+                    <option value="a">A</option>
+                    <option value="b">B</option>
+                    <option value="c">C</option>
+                  </select>
+                </div>
+
+                <div class="input-pair">
+                  <label for="column-input"
+                    >Column <span class="required">[Required]</span></label
+                  >
+
+                  <select name="column-input" id="lwn-column-input" required>
+                    <option value="">Choose...</option>
+                    <option value="a">A</option>
+                    <option value="b">B</option>
+                    <option value="c">C</option>
+                  </select>
+                </div>
+
+                <div class="input-pair">
+                  <label for="row-input"
+                    >Row <span class="required">[Required]</span></label
+                  >
+
+                  <select name="row-input" id="lwn-row-input" required>
+                    <option value="">Choose...</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -457,12 +565,15 @@
           <button class="cancel-button button" onclick="closeCreateOverlay()">
             Cancel
           </button>
-          <button class="submit-button button">Save Record</button>
+          <button class="submit-button button" onclick="validateForm()">
+            Save Record
+          </button>
         </div>
       </div>
     </div>
 
     <script src="/src/js/tablesorting.js"></script>
     <script src="/src/js/overlay.js"></script>
+    <script src="/src/js/toggleform.js"></script>
   </body>
 </html>
