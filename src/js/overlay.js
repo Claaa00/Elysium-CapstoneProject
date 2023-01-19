@@ -225,3 +225,235 @@ function validateEditForm() {
     errorMessage.style.display = "none";
   }
 }
+
+function openAddGraveTypeOverlay() {
+  var x = document.querySelector("#addGraveType-record-overlay");
+  if (x.style.display !== "none") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "flex";
+  }
+}
+
+function closeAddGraveTypeOverlay() {
+  var x = document.querySelector("#addGraveType-record-overlay");
+  if (x.style.display !== "none") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "flex";
+  }
+}
+
+function validateAddGraveTypeForm() {
+  var errorMessage = document.querySelector(".addGraveType-error-message");
+  var graveType = document.querySelector("#graveType-input");
+  var status = document.querySelector("#graveTypeStatus-input");
+  var statusValue = status.options[status.selectedIndex].value;
+
+  if (statusValue == "" || graveType.value.length < 1) {
+    errorMessage.style.display = "block";
+  } else {
+    errorMessage.style.display = "none";
+  }
+}
+
+function openEditGraveTypeOverlay() {
+  var x = document.querySelector("#editGraveType-record-overlay");
+  if (x.style.display !== "none") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "flex";
+  }
+}
+
+function closeEditGraveTypeOverlay() {
+  var x = document.querySelector("#editGraveType-record-overlay");
+  if (x.style.display !== "none") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "flex";
+  }
+}
+
+function validateEditGraveTypeForm() {
+  var errorMessage = document.querySelector(".editGraveType-error-message");
+  var graveType = document.querySelector("#graveType-input-edit");
+  var status = document.querySelector("#graveTypeStatus-input-edit");
+  var statusValue = status.options[status.selectedIndex].value;
+
+  if (statusValue == "" || graveType.value.length < 1) {
+    errorMessage.style.display = "block";
+  } else {
+    errorMessage.style.display = "none";
+  }
+}
+
+function openAddLocationOverlay() {
+  var x = document.querySelector("#addLocation-record-overlay");
+  if (x.style.display !== "none") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "flex";
+  }
+}
+
+function closeAddLocationOverlay() {
+  var x = document.querySelector("#addLocation-record-overlay");
+  if (x.style.display !== "none") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "flex";
+  }
+}
+
+function validateAddLocationForm() {
+  var errorMessage = document.querySelector(".location-error-message");
+  var locationBlock = document.querySelector("#location-block-input");
+  var locationBlockValue =
+    locationBlock.options[locationBlock.selectedIndex].value;
+  var locationColumn = document.querySelector("#location-column-input");
+  var locationColumnValue =
+    locationColumn.options[locationColumn.selectedIndex].value;
+  var locationRow = document.querySelector("#location-row-input");
+  var locationRowValue = locationRow.options[locationRow.selectedIndex].value;
+  var status = document.querySelector("#location-status-input");
+  var statusValue = status.options[status.selectedIndex].value;
+
+  if (
+    statusValue == "" ||
+    locationBlockValue == "" ||
+    locationColumnValue == "" ||
+    locationRowValue == ""
+  ) {
+    errorMessage.style.display = "block";
+  } else {
+    errorMessage.style.display = "none";
+  }
+}
+
+function openEditLocationOverlay() {
+  var x = document.querySelector("#editLocation-record-overlay");
+  if (x.style.display !== "none") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "flex";
+  }
+}
+
+function closeEditLocationOverlay() {
+  var x = document.querySelector("#editLocation-record-overlay");
+  if (x.style.display !== "none") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "flex";
+  }
+}
+
+function validateEditLocationForm() {
+  var errorMessage = document.querySelector(".editlocation-error-message");
+  var locationBlock = document.querySelector("#location-block-input-edit");
+  var locationBlockValue =
+    locationBlock.options[locationBlock.selectedIndex].value;
+  var locationColumn = document.querySelector("#location-column-input-edit");
+  var locationColumnValue =
+    locationColumn.options[locationColumn.selectedIndex].value;
+  var locationRow = document.querySelector("#location-row-input-edit");
+  var locationRowValue = locationRow.options[locationRow.selectedIndex].value;
+  var status = document.querySelector("#location-status-input-edit");
+  var statusValue = status.options[status.selectedIndex].value;
+
+  if (
+    statusValue == "" ||
+    locationBlockValue == "" ||
+    locationColumnValue == "" ||
+    locationRowValue == ""
+  ) {
+    errorMessage.style.display = "block";
+  } else {
+    errorMessage.style.display = "none";
+  }
+}
+
+function openAddBlockOverlay() {
+  var x = document.querySelector("#addBlock-record-overlay");
+  if (x.style.display !== "none") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "flex";
+  }
+}
+
+function closeAddBlockOverlay() {
+  var x = document.querySelector("#addBlock-record-overlay");
+  if (x.style.display !== "none") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "flex";
+  }
+}
+
+function validateAddBlockForm() {
+  var errorMessage = document.querySelector(".block-error-message");
+  var blockBlock = document.querySelector("#block-block-input");
+  var blockColumn = document.querySelector("#block-column-input");
+  var blockRow = document.querySelector("#block-row-input");
+  var blockGraveType = document.querySelector("#block-graveType-input");
+  var blockGraveTypeValue =
+    blockGraveType.options[blockGraveType.selectedIndex].value;
+  var status = document.querySelector("#block-status-input");
+  var statusValue = status.options[status.selectedIndex].value;
+
+  if (
+    statusValue == "" ||
+    blockBlock.value.length < 1 ||
+    blockColumn.value.length < 1 ||
+    blockRow.value.length < 1 ||
+    blockGraveTypeValue == ""
+  ) {
+    errorMessage.style.display = "block";
+  } else {
+    errorMessage.style.display = "none";
+  }
+}
+
+function openEditBlockOverlay() {
+  var x = document.querySelector("#editBlock-record-overlay");
+  if (x.style.display !== "none") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "flex";
+  }
+}
+
+function closeEditBlockOverlay() {
+  var x = document.querySelector("#editBlock-record-overlay");
+  if (x.style.display !== "none") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "flex";
+  }
+}
+
+function validateEditBlockForm() {
+  var errorMessage = document.querySelector(".editblock-error-message");
+  var blockBlock = document.querySelector("#block-block-input-edit");
+  var blockColumn = document.querySelector("#block-column-input-edit");
+  var blockRow = document.querySelector("#block-row-input-edit");
+  var blockGraveType = document.querySelector("#block-graveType-input-edit");
+  var blockGraveTypeValue =
+    blockGraveType.options[blockGraveType.selectedIndex].value;
+  var status = document.querySelector("#block-status-input-edit");
+  var statusValue = status.options[status.selectedIndex].value;
+
+  if (
+    statusValue == "" ||
+    blockBlock.value.length < 1 ||
+    blockColumn.value.length < 1 ||
+    blockRow.value.length < 1 ||
+    blockGraveTypeValue == ""
+  ) {
+    errorMessage.style.display = "block";
+  } else {
+    errorMessage.style.display = "none";
+  }
+}

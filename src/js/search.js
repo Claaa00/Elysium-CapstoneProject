@@ -153,3 +153,81 @@ $(document).ready(function () {
     });
   });
 });
+
+// Search in Grave Type tab
+function toggleGraveTypeSearchBox() {
+  var x = document.querySelector("#graveType-table-search-box");
+  var z = document.querySelector(".graveType-search-icon");
+  var a = document.querySelector(".graveType-close-icon");
+
+  if (x.style.display !== "none") {
+    x.style.display = "none";
+    z.style.display = "block";
+    a.style.display = "none";
+  } else {
+    x.style.display = "flex";
+    z.style.display = "none";
+    a.style.display = "block";
+  }
+}
+
+$(document).ready(function () {
+  $("#graveType-table-search-box").on("keyup", function () {
+    var value = $(this).val().toLowerCase();
+    $("#graveType-records-table tr").filter(function () {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+    });
+  });
+});
+
+// Search in Location tab
+function toggleLocationSearchBox() {
+  var x = document.querySelector("#location-table-search-box");
+  var z = document.querySelector(".location-search-icon");
+  var a = document.querySelector(".location-close-icon");
+
+  if (x.style.display !== "none") {
+    x.style.display = "none";
+    z.style.display = "block";
+    a.style.display = "none";
+  } else {
+    x.style.display = "flex";
+    z.style.display = "none";
+    a.style.display = "block";
+  }
+}
+
+$(document).ready(function () {
+  $("#location-table-search-box").on("keyup", function () {
+    var value = $(this).val().toLowerCase();
+    $("#location-records-table tr").filter(function () {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+    });
+  });
+});
+
+// Search in Block tab
+function toggleBlockSearchBox() {
+  var x = document.querySelector("#block-table-search-box");
+  var z = document.querySelector(".block-search-icon");
+  var a = document.querySelector(".block-close-icon");
+
+  if (x.style.display !== "none") {
+    x.style.display = "none";
+    z.style.display = "block";
+    a.style.display = "none";
+  } else {
+    x.style.display = "flex";
+    z.style.display = "none";
+    a.style.display = "block";
+  }
+}
+
+$(document).ready(function () {
+  $("#block-table-search-box").on("keyup", function () {
+    var value = $(this).val().toLowerCase();
+    $("#block-records-table tr").filter(function () {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+    });
+  });
+});
