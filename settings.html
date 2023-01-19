@@ -130,51 +130,47 @@
             <button class="tab-links" onclick="openLink(event, 'aboutUs')">
               About Us
             </button>
+
+            <button class="tab-menu">
+              <i class="bx bx-menu"></i>
+
+              <div class="tab-menu-links container-shadow">
+                <a onclick="openLink(event, 'general')">General</a>
+                <a onclick="openLink(event, 'account')">Account</a>
+                <a onclick="openLink(event, 'aboutUs')">About Us</a>
+              </div>
+            </button>
           </div>
 
           <div class="tab-content" id="general">
             <div class="setting-group-container">
-              <h2 class="setting-group-label">General Settings</h2>
+              <h2 class="setting-group-label">
+                General Settings
+                <i class="bx bxs-edit-alt" onclick="openGeneralSettings()"></i>
+              </h2>
 
               <div class="setting-group">
                 <div class="setting">
                   <div class="setting-info">
                     <p class="setting-label">Cemetery Name</p>
-                    <h2 class="setting-set" data-editable>
-                      Binan City Cemetery
-                    </h2>
-
-                    <input
-                      type="text"
-                      class="cemetery-name hidden"
-                      placeholder="Enter cemetery name..."
-                    />
+                    <h2 class="setting-set">Binan City Cemetery</h2>
                   </div>
-
-                  <i class="bx bxs-edit-alt"></i>
                 </div>
               </div>
             </div>
 
             <div class="setting-group-container">
-              <h2 class="setting-group-label">Profile Settings</h2>
+              <h2 class="setting-group-label">
+                Profile Settings
+                <i class="bx bxs-edit-alt" onclick="openProfileSettings()"></i>
+              </h2>
 
               <div class="setting-group">
                 <div class="setting">
                   <div class="setting-info">
                     <p class="setting-label">Profile Name</p>
-                    <h2 class="setting-set" data-editable>
-                      Binan City Cemetery
-                    </h2>
-
-                    <input
-                      type="text"
-                      class="cemetery-name hidden"
-                      placeholder="Enter cemetery name..."
-                    />
+                    <h2 class="setting-set">Binan City Cemetery</h2>
                   </div>
-
-                  <i class="bx bxs-edit-alt"></i>
                 </div>
               </div>
             </div>
@@ -182,51 +178,40 @@
 
           <div class="tab-content" id="account">
             <div class="setting-group-container">
-              <h2 class="setting-group-label">Security Settings</h2>
+              <h2 class="setting-group-label">
+                Security Settings
+                <i class="bx bxs-edit-alt" onclick="openSecuritySettings()"></i>
+              </h2>
 
               <div class="setting-group">
                 <div class="setting">
                   <div class="setting-info">
                     <p class="setting-label">Username</p>
-                    <h2 class="setting-set" data-editable>lolololol</h2>
-
-                    <input
-                      type="text"
-                      class="cemetery-name hidden"
-                      placeholder="Enter username..."
-                    />
+                    <h2 class="setting-set">lolololol</h2>
                   </div>
-
-                  <i class="bx bxs-edit-alt"></i>
                 </div>
 
                 <div class="setting">
                   <div class="setting-info">
                     <p class="setting-label">Password</p>
-                    <h2 class="setting-set" data-editable>*************</h2>
-
-                    <input
-                      type="password"
-                      class="cemetery-name hidden"
-                      placeholder="Enter password..."
-                    />
+                    <h2 class="setting-set">*************</h2>
                   </div>
-
-                  <i class="bx bxs-edit-alt"></i>
                 </div>
               </div>
             </div>
 
-            <div class="setting-group-container">
+            <div class="setting-group-container setting-activities">
               <h2 class="setting-group-label">Activities</h2>
 
-              <div class="setting-group">
+              <div class="setting-group" onclick="openRecentActivities()">
                 <div class="setting">
-                  <div class="setting-info" onclick="openRecentActivities()">
-                    <p class="setting-label">View Recent Activities</p>
+                  <div class="setting-info">
+                    <p class="setting-label recent-info-button">
+                      View Recent Activities
+                    </p>
                   </div>
 
-                  <i class="bx bx-show"></i>
+                  <i class="bx bx-chevron-right"></i>
                 </div>
               </div>
             </div>
@@ -332,7 +317,7 @@
                       Grave Type
                     </th>
                     <th>Location</th>
-                    <th class="mdate-header-sort">Death Date</th>
+                    <th class="mdate-header-sort">Date Modified</th>
                   </tr>
                 </thead>
                 <tbody id="rec-records-table">
@@ -446,37 +431,6 @@
                 </tbody>
               </table>
             </div>
-
-            <footer class="table-footer">
-              <div class="items-per-page select">
-                <label for="items-datalist">Items per page</label>
-                <select name="items-datalist" id="items-datalist">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="3">4</option>
-                </select>
-              </div>
-
-              <div class="pagination">
-                <div class="current-page select">
-                  <label for="page-datalist">Page</label>
-                  <select name="page-datalist" id="page-datalist">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="3">4</option>
-                  </select>
-                </div>
-
-                <p class="page-count">of <span class="count">100</span></p>
-
-                <div class="page-control">
-                  <i class="bx bxs-chevron-left"></i>
-                  <i class="bx bxs-chevron-right"></i>
-                </div>
-              </div>
-            </footer>
           </div>
         </div>
       </div>
@@ -719,6 +673,134 @@
           <button class="submit-button button" onclick="validateForm()">
             Save Record
           </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="overlay-wrapper"
+      id="general-settings-overlay"
+      style="display: none"
+    >
+      <div class="overlay container-shadow">
+        <h2 class="overlay-name">General</h2>
+
+        <div class="overlay-details">
+          <form class="overlay-form">
+            <fieldset class="input-group-container">
+              <legend class="input-group-name">General Settings</legend>
+
+              <div class="input-group">
+                <div class="input-pair">
+                  <label for="cemetery-name-setting">Cemetery Name</label>
+
+                  <input
+                    type="text"
+                    name="cemetery-name-setting"
+                    id="cemetery-name-setting"
+                    placeholder="Enter cemetery name"
+                  />
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+
+        <div class="overlay-controls">
+          <button class="cancel-button button" onclick="closeGeneralSettings()">
+            Cancel
+          </button>
+          <button class="submit-button button">Save Changes</button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="overlay-wrapper"
+      id="profile-settings-overlay"
+      style="display: none"
+    >
+      <div class="overlay container-shadow">
+        <h2 class="overlay-name">General</h2>
+
+        <div class="overlay-details">
+          <form class="overlay-form">
+            <fieldset class="input-group-container">
+              <legend class="input-group-name">Profile Settings</legend>
+
+              <div class="input-group">
+                <div class="input-pair">
+                  <label for="profile-name-setting">Profile Name</label>
+
+                  <input
+                    type="text"
+                    name="profile-name-setting"
+                    id="profile-name-setting"
+                    placeholder="Enter profile name"
+                  />
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+
+        <div class="overlay-controls">
+          <button class="cancel-button button" onclick="closeProfileSettings()">
+            Cancel
+          </button>
+          <button class="submit-button button">Save Changes</button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="overlay-wrapper"
+      id="security-settings-overlay"
+      style="display: none"
+    >
+      <div class="overlay container-shadow">
+        <h2 class="overlay-name">Account</h2>
+
+        <div class="overlay-details">
+          <form class="overlay-form">
+            <fieldset class="input-group-container">
+              <legend class="input-group-name">Security Settings</legend>
+
+              <div class="input-group">
+                <div class="input-pair">
+                  <label for="username-setting">Username</label>
+
+                  <input
+                    type="text"
+                    name="username-setting"
+                    id="username-setting"
+                    placeholder="Enter username"
+                  />
+                </div>
+
+                <div class="input-pair">
+                  <label for="password-setting">Password</label>
+
+                  <input
+                    type="text"
+                    name="password-setting"
+                    id="password-setting"
+                    placeholder="Enter password"
+                  />
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+
+        <div class="overlay-controls">
+          <button
+            class="cancel-button button"
+            onclick="closeSecuritySettings()"
+          >
+            Cancel
+          </button>
+          <button class="submit-button button">Save Changes</button>
         </div>
       </div>
     </div>

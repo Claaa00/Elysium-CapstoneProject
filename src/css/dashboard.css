@@ -28,16 +28,19 @@
   height: calc(100vh - 164px);
   display: flex;
   gap: 1rem;
+  width: 100%;
 }
 
 .left-info-group {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   gap: 1rem;
 }
 
 .top-info {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -155,5 +158,17 @@
 
 .dashboard-table-container td:nth-child(2) {
   font-weight: 600;
+  text-transform: uppercase;
+}
+
+.activities {
+  border-block: 2px solid var(--color-primary);
+}
+
+h2 {
+  color: var(--color-primary);
+}
+
+.greeting-container .cemetery-name {
   text-transform: uppercase;
 }

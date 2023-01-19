@@ -17,6 +17,7 @@
   display: flex;
   justify-content: right;
   align-items: center;
+  flex-wrap: wrap;
   /* gap: 1rem; */
 }
 
@@ -78,8 +79,8 @@
 }
 
 .records-table-container {
-  /* max-height: calc(100% - 42px); */
-  max-height: calc(100% - 86px);
+  max-height: calc(100% - 66px);
+  /* max-height: calc(100% - 86px); */
 }
 
 .records-table tr th:nth-of-type(1),

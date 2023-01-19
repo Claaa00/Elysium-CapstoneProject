@@ -18,6 +18,9 @@
 
 .setting-group-label {
   padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .setting {
@@ -144,6 +147,36 @@
 }
 
 .settings-table-container {
-  /* max-height: calc(100% - 42px); */
-  max-height: calc(100% - 87px);
+  max-height: calc(100% - 72px);
+  /* max-height: calc(100% - 87px); */
+}
+
+tr td:nth-child(2) {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.setting-activities .setting-group .setting:hover {
+  background-color: #ddd;
+}
+
+.setting-group-label .bx {
+  padding: 5px;
+  border-radius: 50px;
+}
+
+.setting-group-label .bx:hover {
+  background-color: #ddd;
+}
+
+.tab-links:nth-of-type(3) {
+  border-top-right-radius: 6px;
+}
+
+.setting .bx-chevron-right {
+  font-size: 18px;
+}
+
+.recent-info-button {
+  font-weight: 700;
 }

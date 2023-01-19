@@ -134,6 +134,18 @@
             <button class="tab-links" onclick="openLink(event, 'archived')">
               Archived <span class="badge">20,000</span>
             </button>
+
+            <button class="tab-menu">
+              <i class="bx bx-menu"></i>
+
+              <div class="tab-menu-links container-shadow">
+                <a onclick="openLink(event, 'all')">All</a>
+                <a onclick="openLink(event, 'apartment')">Apartment</a>
+                <a onclick="openLink(event, 'lawn')">Lawn</a>
+                <a onclick="openLink(event, 'boneVault')">Bone Vault</a>
+                <a onclick="openLink(event, 'archived')">Archived</a>
+              </div>
+            </button>
           </div>
 
           <div class="tab-content" id="all">
@@ -173,7 +185,7 @@
                 class="create-button button"
                 onclick="openCreateOverlay()"
               >
-                Create
+                <p class="create-button-name">Create</p>
                 <i class="bx bx-plus"></i>
               </button>
             </div>
@@ -479,37 +491,6 @@
                 </tbody>
               </table>
             </div>
-
-            <footer class="table-footer">
-              <div class="items-per-page select">
-                <label for="items-datalist">Items per page</label>
-                <select name="items-datalist" id="items-datalist">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="3">4</option>
-                </select>
-              </div>
-
-              <div class="pagination">
-                <div class="current-page select">
-                  <label for="page-datalist">Page</label>
-                  <select name="page-datalist" id="page-datalist">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="3">4</option>
-                  </select>
-                </div>
-
-                <p class="page-count">of <span class="count">100</span></p>
-
-                <div class="page-control">
-                  <i class="bx bxs-chevron-left"></i>
-                  <i class="bx bxs-chevron-right"></i>
-                </div>
-              </div>
-            </footer>
           </div>
 
           <div class="tab-content" id="apartment">
@@ -549,7 +530,7 @@
                 class="create-button button"
                 onclick="openCreateOverlay()"
               >
-                Create
+                <p class="create-button-name">Create</p>
                 <i class="bx bx-plus"></i>
               </button>
             </div>
@@ -855,37 +836,6 @@
                 </tbody>
               </table>
             </div>
-
-            <footer class="table-footer">
-              <div class="items-per-page select">
-                <label for="items-datalist">Items per page</label>
-                <select name="items-datalist" id="items-datalist">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="3">4</option>
-                </select>
-              </div>
-
-              <div class="pagination">
-                <div class="current-page select">
-                  <label for="page-datalist">Page</label>
-                  <select name="page-datalist" id="page-datalist">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="3">4</option>
-                  </select>
-                </div>
-
-                <p class="page-count">of <span class="count">100</span></p>
-
-                <div class="page-control">
-                  <i class="bx bxs-chevron-left"></i>
-                  <i class="bx bxs-chevron-right"></i>
-                </div>
-              </div>
-            </footer>
           </div>
 
           <div class="tab-content" id="lawn">
@@ -925,7 +875,7 @@
                 class="create-button button"
                 onclick="openCreateOverlay()"
               >
-                Create
+                <p class="create-button-name">Create</p>
                 <i class="bx bx-plus"></i>
               </button>
             </div>
@@ -1231,37 +1181,6 @@
                 </tbody>
               </table>
             </div>
-
-            <footer class="table-footer">
-              <div class="items-per-page select">
-                <label for="items-datalist">Items per page</label>
-                <select name="items-datalist" id="items-datalist">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="3">4</option>
-                </select>
-              </div>
-
-              <div class="pagination">
-                <div class="current-page select">
-                  <label for="page-datalist">Page</label>
-                  <select name="page-datalist" id="page-datalist">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="3">4</option>
-                  </select>
-                </div>
-
-                <p class="page-count">of <span class="count">100</span></p>
-
-                <div class="page-control">
-                  <i class="bx bxs-chevron-left"></i>
-                  <i class="bx bxs-chevron-right"></i>
-                </div>
-              </div>
-            </footer>
           </div>
 
           <div class="tab-content" id="boneVault">
@@ -1301,7 +1220,7 @@
                 class="create-button button"
                 onclick="openCreateOverlay()"
               >
-                Create
+                <p class="create-button-name">Create</p>
                 <i class="bx bx-plus"></i>
               </button>
             </div>
@@ -1607,37 +1526,6 @@
                 </tbody>
               </table>
             </div>
-
-            <footer class="table-footer">
-              <div class="items-per-page select">
-                <label for="items-datalist">Items per page</label>
-                <select name="items-datalist" id="items-datalist">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="3">4</option>
-                </select>
-              </div>
-
-              <div class="pagination">
-                <div class="current-page select">
-                  <label for="page-datalist">Page</label>
-                  <select name="page-datalist" id="page-datalist">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="3">4</option>
-                  </select>
-                </div>
-
-                <p class="page-count">of <span class="count">100</span></p>
-
-                <div class="page-control">
-                  <i class="bx bxs-chevron-left"></i>
-                  <i class="bx bxs-chevron-right"></i>
-                </div>
-              </div>
-            </footer>
           </div>
 
           <div class="tab-content" id="archived">
@@ -1677,7 +1565,7 @@
                 class="create-button button"
                 onclick="openCreateOverlay()"
               >
-                Create
+                <p class="create-button-name">Create</p>
                 <i class="bx bx-plus"></i>
               </button>
             </div>
@@ -1983,37 +1871,6 @@
                 </tbody>
               </table>
             </div>
-
-            <footer class="table-footer">
-              <div class="items-per-page select">
-                <label for="items-datalist">Items per page</label>
-                <select name="items-datalist" id="items-datalist">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="3">4</option>
-                </select>
-              </div>
-
-              <div class="pagination">
-                <div class="current-page select">
-                  <label for="page-datalist">Page</label>
-                  <select name="page-datalist" id="page-datalist">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="3">4</option>
-                  </select>
-                </div>
-
-                <p class="page-count">of <span class="count">100</span></p>
-
-                <div class="page-control">
-                  <i class="bx bxs-chevron-left"></i>
-                  <i class="bx bxs-chevron-right"></i>
-                </div>
-              </div>
-            </footer>
           </div>
         </div>
       </div>
@@ -2493,24 +2350,6 @@
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
-                  </select>
-                </div>
-              </div>
-            </fieldset>
-
-            <fieldset class="input-group-container">
-              <legend class="input-group-name">Interment Status</legend>
-
-              <div class="input-group">
-                <div class="input-pair">
-                  <label for="status-input"
-                    >Status <span class="required">[Required]</span></label
-                  >
-
-                  <select name="status-input" id="status-input-edit" required>
-                    <option value="">Choose...</option>
-                    <option value="active">Active</option>
-                    <option value="archived">Archive</option>
                   </select>
                 </div>
               </div>
