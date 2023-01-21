@@ -48,7 +48,9 @@
             height="100px"
             style="border-radius: 50%"
           />
-          <p class="cemetery-name">Binan City Cemetery</p>
+          <p class="cemetery-name" id="aside-cemetery-name">
+            Binan City Cemetery
+          </p>
         </div>
 
         <nav class="navigations">
@@ -91,7 +93,7 @@
         </nav>
 
         <div class="logout-button">
-          <a href="./" class="link-item">
+          <a href="./" class="link-item" id="logout-button">
             <li class="link">
               <p class="link-name">Logout</p>
               <i class="bx bx-log-out"></i>
@@ -110,6 +112,7 @@
                 type="search"
                 class="search-bar"
                 placeholder="Search for records.."
+                id="header-search-box"
               />
             </form>
 
@@ -160,7 +163,9 @@
                 <div class="setting">
                   <div class="setting-info">
                     <p class="setting-label">Cemetery Name</p>
-                    <h2 class="setting-set">Binan City Cemetery</h2>
+                    <h2 class="setting-set" id="settings-cemetery-name">
+                      Binan City Cemetery
+                    </h2>
                   </div>
                 </div>
               </div>
@@ -176,7 +181,9 @@
                 <div class="setting">
                   <div class="setting-info">
                     <p class="setting-label">Profile Name</p>
-                    <h2 class="setting-set">Binan City Cemetery</h2>
+                    <h2 class="setting-set" id="settings-profile-name">
+                      Binan City Cemetery
+                    </h2>
                   </div>
                 </div>
               </div>
@@ -194,14 +201,16 @@
                 <div class="setting">
                   <div class="setting-info">
                     <p class="setting-label">Username</p>
-                    <h2 class="setting-set">lolololol</h2>
+                    <h2 class="setting-set" id="settings-username">Admin</h2>
                   </div>
                 </div>
 
                 <div class="setting">
                   <div class="setting-info">
                     <p class="setting-label">Password</p>
-                    <h2 class="setting-set">*************</h2>
+                    <h2 class="setting-set" id="settings-password">
+                      *************
+                    </h2>
                   </div>
                 </div>
               </div>
@@ -500,12 +509,7 @@
                 <div class="input-pair">
                   <label for="death-date">Death Date</label>
 
-                  <input
-                    type="date"
-                    name="death-date"
-                    id="death-date"
-                    placeholder="Enter death date"
-                  />
+                  <input type="date" name="death-date" id="death-date" />
                 </div>
               </div>
             </fieldset>
@@ -677,7 +681,11 @@
           <button class="cancel-button button" onclick="closeCreateOverlay()">
             Cancel
           </button>
-          <button class="submit-button button" onclick="validateForm()">
+          <button
+            class="submit-button button"
+            onclick="validateForm()"
+            id="createNewRecord"
+          >
             Save Record
           </button>
         </div>
@@ -717,7 +725,9 @@
           <button class="cancel-button button" onclick="closeGeneralSettings()">
             Cancel
           </button>
-          <button class="submit-button button">Save Changes</button>
+          <button class="submit-button button" id="cemetery-name-submit">
+            Save Changes
+          </button>
         </div>
       </div>
     </div>
@@ -755,7 +765,9 @@
           <button class="cancel-button button" onclick="closeProfileSettings()">
             Cancel
           </button>
-          <button class="submit-button button">Save Changes</button>
+          <button class="submit-button button" id="profile-name-submit">
+            Save Changes
+          </button>
         </div>
       </div>
     </div>
@@ -807,7 +819,31 @@
           >
             Cancel
           </button>
-          <button class="submit-button button">Save Changes</button>
+          <button class="submit-button button" onclick="openConfirmOverlay()">
+            Save Changes
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="overlay-wrapper" id="confirm-overlay" style="display: none">
+      <div class="overlay container-shadow">
+        <h2 class="overlay-name">Update Security Details?</h2>
+
+        <div class="overlay-details">
+          <p class="confirm-message">
+            Are you sure you want to
+            <span class="highlight">update</span> account security details?
+          </p>
+        </div>
+
+        <div class="overlay-controls">
+          <button class="cancel-button button" onclick="closeConfirmOverlay()">
+            No
+          </button>
+          <button class="submit-button button" id="security-confirm-button">
+            Yes
+          </button>
         </div>
       </div>
     </div>

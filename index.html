@@ -41,7 +41,9 @@
             />
             <strong translate="no">lysium</strong></small
           >
-          <small class="cemetery-name">Binan City Cemetery</small></span
+          <small class="cemetery-name" id="login-cemetery-name"
+            >Binan City Cemetery</small
+          ></span
         >
 
         <h1 class="form-label">Login</h1>
@@ -97,24 +99,16 @@
             value="Login"
             class="button login-btn disabled"
             aria-disabled="true"
+            id="login-button"
           />
 
           <div class="link go-to-website-link">
-            <a href="dashboard.html" class="go-to-website">Go to website</a>
+            <a href="dashboard.html" class="go-to-website" id="login-gtw"
+              >Go to website</a
+            >
           </div>
         </form>
       </div>
-
-      <!-- 
-        NOTE:
-
-        Pag pinindot yung forgot password na link, 
-        kaya bang may mag s send ng password recovery link or 
-        something sa email nung cemetery tapos sa link 
-        na binigay nun ma aaccess yung link para 
-        makapunta sa forget password na page??
-        
-       -->
 
       <div
         class="forgot-password-form-container main-padding hidden"
@@ -130,7 +124,9 @@
             />
             <strong translate="no">lysium</strong></small
           >
-          <small class="cemetery-name">Binan City Cemetery</small></span
+          <small class="cemetery-name" id="fpw-cemetery-name"
+            >Binan City Cemetery</small
+          ></span
         >
 
         <h1 class="form-label">Forgot Password</h1>
@@ -168,7 +164,7 @@
           <div class="input-group">
             <input
               type="password"
-              id="RetypeNewPassword"
+              id="retypeNewPassword"
               name="retype-new-password"
               class="input"
               autofocus
@@ -193,6 +189,7 @@
             value="Save new password"
             class="button submit-new-password-btn disabled"
             aria-disabled="true"
+            id="savePassword"
           />
 
           <div class="link login-link">
@@ -200,7 +197,9 @@
           </div>
 
           <div class="link go-to-website-link">
-            <a href="dashboard.html" class="go-to-website">Go to website</a>
+            <a href="dashboard.html" class="go-to-website" id="fpw-gtw"
+              >Go to website</a
+            >
           </div>
         </form>
       </div>

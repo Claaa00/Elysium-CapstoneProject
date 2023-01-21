@@ -48,7 +48,9 @@
             height="100px"
             style="border-radius: 50%"
           />
-          <p class="cemetery-name">Binan City Cemetery</p>
+          <p class="cemetery-name" id="aside-cemetery-name">
+            Binan City Cemetery
+          </p>
         </div>
 
         <nav class="navigations">
@@ -91,7 +93,7 @@
         </nav>
 
         <div class="logout-button">
-          <a href="./" class="link-item">
+          <a href="./" class="link-item" id="logout-button">
             <li class="link">
               <p class="link-name">Logout</p>
               <i class="bx bx-log-out"></i>
@@ -110,6 +112,7 @@
                 type="search"
                 class="search-bar"
                 placeholder="Search for records.."
+                id="header-search-box"
               />
             </form>
 
@@ -666,7 +669,11 @@
           <button class="cancel-button button" onclick="closeCreateOverlay()">
             Cancel
           </button>
-          <button class="submit-button button" onclick="validateForm()">
+          <button
+            class="submit-button button"
+            onclick="validateForm()"
+            id="createNewRecord"
+          >
             Save Record
           </button>
         </div>

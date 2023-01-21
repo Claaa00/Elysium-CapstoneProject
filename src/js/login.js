@@ -71,7 +71,7 @@ inputs.forEach(function (inputItem) {
 //FORGOT PASSWORD FORM
 
 var inputNewPassword = document.querySelector("#inputNewPassword");
-var retypeNewPassword = document.querySelector("#RetypeNewPassword");
+var retypeNewPassword = document.querySelector("#retypeNewPassword");
 var errorNewPassword = document.querySelector(".new-password-error");
 var errorRetypePassword = document.querySelector(".retype-password-error");
 var buttonSubmit = document.querySelector(".submit-new-password-btn");

@@ -48,7 +48,9 @@
             height="100px"
             style="border-radius: 50%"
           />
-          <p class="cemetery-name">Binan City Cemetery</p>
+          <p class="cemetery-name" id="aside-cemetery-name">
+            Binan City Cemetery
+          </p>
         </div>
 
         <nav class="navigations">
@@ -91,7 +93,7 @@
         </nav>
 
         <div class="logout-button">
-          <a href="./" class="link-item">
+          <a href="./" class="link-item" id="logout-button">
             <li class="link">
               <p class="link-name">Logout</p>
               <i class="bx bx-log-out"></i>
@@ -110,6 +112,7 @@
                 type="search"
                 class="search-bar"
                 placeholder="Search for records.."
+                id="header-search-box"
               />
             </form>
 
@@ -122,24 +125,46 @@
 
         <div class="records-main-container container-shadow">
           <div class="tab">
-            <button class="tab-links" onclick="openLink(event, 'all')">
-              All <span class="badge">1,000,000</span>
+            <button
+              class="tab-links"
+              onclick="openLink(event, 'all')"
+              id="all-tab"
+            >
+              All <span class="badge" id="allTabCount">1,000,000</span>
             </button>
 
-            <button class="tab-links" onclick="openLink(event, 'apartment')">
-              Apartment <span class="badge">430,000</span>
+            <button
+              class="tab-links"
+              onclick="openLink(event, 'apartment')"
+              id="apartment-tab"
+            >
+              Apartment
+              <span class="badge" id="apartmentTabCount">430,000</span>
             </button>
 
-            <button class="tab-links" onclick="openLink(event, 'lawn')">
-              Lawn <span class="badge">70,000</span>
+            <button
+              class="tab-links"
+              onclick="openLink(event, 'lawn')"
+              id="lawn-tab"
+            >
+              Lawn <span class="badge" id="lawnTabCount">70,000</span>
             </button>
 
-            <button class="tab-links" onclick="openLink(event, 'boneVault')">
-              Bone Vault <span class="badge">480,000</span>
+            <button
+              class="tab-links"
+              onclick="openLink(event, 'boneVault')"
+              id="bone-vault-tab"
+            >
+              Bone Vault
+              <span class="badge" id="boneVaultTabCount">480,000</span>
             </button>
 
-            <button class="tab-links" onclick="openLink(event, 'archived')">
-              Archived <span class="badge">20,000</span>
+            <button
+              class="tab-links"
+              onclick="openLink(event, 'archived')"
+              id="archived-tab"
+            >
+              Archived <span class="badge" id="archivedTabCount">20,000</span>
             </button>
 
             <button class="tab-menu">
@@ -185,7 +210,7 @@
                 onclick="openArchiveOverlay()"
                 disabled
               >
-                <i class="bx bx-box"></i>
+                <i class="bx bx-archive-in"></i>
               </button>
 
               <button
@@ -243,7 +268,7 @@
                         class="archive-button button"
                         onclick="openArchiveOverlay()"
                       >
-                        <i class="bx bx-box"></i>
+                        <i class="bx bx-archive-in"></i>
                       </button>
                     </td>
                   </tr>
@@ -274,7 +299,7 @@
                       </button>
 
                       <button class="archive-button button">
-                        <i class="bx bx-box"></i>
+                        <i class="bx bx-archive-in"></i>
                       </button>
                     </td>
                   </tr>
@@ -305,7 +330,7 @@
                       </button>
 
                       <button class="archive-button button">
-                        <i class="bx bx-box"></i>
+                        <i class="bx bx-archive-in"></i>
                       </button>
                     </td>
                   </tr>
@@ -336,7 +361,7 @@
                       </button>
 
                       <button class="archive-button button">
-                        <i class="bx bx-box"></i>
+                        <i class="bx bx-archive-in"></i>
                       </button>
                     </td>
                   </tr>
@@ -367,7 +392,7 @@
                       </button>
 
                       <button class="archive-button button">
-                        <i class="bx bx-box"></i>
+                        <i class="bx bx-archive-in"></i>
                       </button>
                     </td>
                   </tr>
@@ -398,7 +423,7 @@
                       </button>
 
                       <button class="archive-button button">
-                        <i class="bx bx-box"></i>
+                        <i class="bx bx-archive-in"></i>
                       </button>
                     </td>
                   </tr>
@@ -429,7 +454,7 @@
                       </button>
 
                       <button class="archive-button button">
-                        <i class="bx bx-box"></i>
+                        <i class="bx bx-archive-in"></i>
                       </button>
                     </td>
                   </tr>
@@ -460,7 +485,7 @@
                       </button>
 
                       <button class="archive-button button">
-                        <i class="bx bx-box"></i>
+                        <i class="bx bx-archive-in"></i>
                       </button>
                     </td>
                   </tr>
@@ -491,7 +516,7 @@
                       </button>
 
                       <button class="archive-button button">
-                        <i class="bx bx-box"></i>
+                        <i class="bx bx-archive-in"></i>
                       </button>
                     </td>
                   </tr>
@@ -530,7 +555,7 @@
                 onclick="openArchiveOverlay()"
                 disabled
               >
-                <i class="bx bx-box"></i>
+                <i class="bx bx-archive-in"></i>
               </button>
 
               <button
@@ -588,69 +613,7 @@
                         class="archive-button button"
                         onclick="openArchiveOverlay()"
                       >
-                        <i class="bx bx-box"></i>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td><input type="checkbox" class="checkbox" /></td>
-                    <td class="string-body-sort">2234567890</td>
-                    <td class="string-body-sort">Mary Paingas</td>
-                    <td class="bdate-body-sort">11/01/1998</td>
-                    <td class="ddate-body-sort">11/02/2017</td>
-                    <td class="string-body-sort">
-                      <div class="chip green-chip">Lawn</div>
-                    </td>
-                    <td>Block A, B2</td>
-                    <td class="action-buttons">
-                      <button
-                        class="show-button button"
-                        onclick="openDetailedViewOverlay()"
-                      >
-                        <i class="bx bx-show"></i>
-                      </button>
-
-                      <button
-                        class="edit-button button"
-                        onclick="openEditOverlay()"
-                      >
-                        <i class="bx bxs-edit-alt"></i>
-                      </button>
-
-                      <button class="archive-button button">
-                        <i class="bx bx-box"></i>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td><input type="checkbox" class="checkbox" /></td>
-                    <td class="string-body-sort">1234567891</td>
-                    <td class="string-body-sort">Elton John Navarro</td>
-                    <td class="bdate-body-sort">11/25/1995</td>
-                    <td class="ddate-body-sort">11/12/2020</td>
-                    <td class="string-body-sort">
-                      <div class="chip red-chip">Bone Vault</div>
-                    </td>
-                    <td>Block A, B2</td>
-                    <td class="action-buttons">
-                      <button
-                        class="show-button button"
-                        onclick="openDetailedViewOverlay()"
-                      >
-                        <i class="bx bx-show"></i>
-                      </button>
-
-                      <button
-                        class="edit-button button"
-                        onclick="openEditOverlay()"
-                      >
-                        <i class="bx bxs-edit-alt"></i>
-                      </button>
-
-                      <button class="archive-button button">
-                        <i class="bx bx-box"></i>
+                        <i class="bx bx-archive-in"></i>
                       </button>
                     </td>
                   </tr>
@@ -681,7 +644,7 @@
                       </button>
 
                       <button class="archive-button button">
-                        <i class="bx bx-box"></i>
+                        <i class="bx bx-archive-in"></i>
                       </button>
                     </td>
                   </tr>
@@ -712,38 +675,7 @@
                       </button>
 
                       <button class="archive-button button">
-                        <i class="bx bx-box"></i>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td><input type="checkbox" class="checkbox" /></td>
-                    <td class="string-body-sort">1234567890</td>
-                    <td class="string-body-sort">Erika Tecson</td>
-                    <td class="bdate-body-sort">11/01/1990</td>
-                    <td class="ddate-body-sort">11/02/2012</td>
-                    <td class="string-body-sort">
-                      <div class="chip green-chip">Lawn</div>
-                    </td>
-                    <td>Block A, B2</td>
-                    <td class="action-buttons">
-                      <button
-                        class="show-button button"
-                        onclick="openDetailedViewOverlay()"
-                      >
-                        <i class="bx bx-show"></i>
-                      </button>
-
-                      <button
-                        class="edit-button button"
-                        onclick="openEditOverlay()"
-                      >
-                        <i class="bx bxs-edit-alt"></i>
-                      </button>
-
-                      <button class="archive-button button">
-                        <i class="bx bx-box"></i>
+                        <i class="bx bx-archive-in"></i>
                       </button>
                     </td>
                   </tr>
@@ -774,69 +706,7 @@
                       </button>
 
                       <button class="archive-button button">
-                        <i class="bx bx-box"></i>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td><input type="checkbox" class="checkbox" /></td>
-                    <td class="string-body-sort">1234567890</td>
-                    <td class="string-body-sort">Clarence Paingas</td>
-                    <td class="bdate-body-sort">11/03/1995</td>
-                    <td class="ddate-body-sort">11/04/2020</td>
-                    <td class="string-body-sort">
-                      <div class="chip red-chip">Bone Vault</div>
-                    </td>
-                    <td>Block A, B2</td>
-                    <td class="action-buttons">
-                      <button
-                        class="show-button button"
-                        onclick="openDetailedViewOverlay()"
-                      >
-                        <i class="bx bx-show"></i>
-                      </button>
-
-                      <button
-                        class="edit-button button"
-                        onclick="openEditOverlay()"
-                      >
-                        <i class="bx bxs-edit-alt"></i>
-                      </button>
-
-                      <button class="archive-button button">
-                        <i class="bx bx-box"></i>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td><input type="checkbox" class="checkbox" /></td>
-                    <td class="string-body-sort">1234567890</td>
-                    <td class="string-body-sort">Dolores Paingas</td>
-                    <td class="bdate-body-sort">09/01/1995</td>
-                    <td class="ddate-body-sort">08/02/2020</td>
-                    <td class="string-body-sort">
-                      <div class="chip red-chip">Bone Vault</div>
-                    </td>
-                    <td>Block A, B2</td>
-                    <td class="action-buttons">
-                      <button
-                        class="show-button button"
-                        onclick="openDetailedViewOverlay()"
-                      >
-                        <i class="bx bx-show"></i>
-                      </button>
-
-                      <button
-                        class="edit-button button"
-                        onclick="openEditOverlay()"
-                      >
-                        <i class="bx bxs-edit-alt"></i>
-                      </button>
-
-                      <button class="archive-button button">
-                        <i class="bx bx-box"></i>
+                        <i class="bx bx-archive-in"></i>
                       </button>
                     </td>
                   </tr>
@@ -875,7 +745,7 @@
                 onclick="openArchiveOverlay()"
                 disabled
               >
-                <i class="bx bx-box"></i>
+                <i class="bx bx-archive-in"></i>
               </button>
 
               <button
@@ -906,40 +776,6 @@
                 <tbody id="lwn-records-table">
                   <tr>
                     <td><input type="checkbox" class="checkbox" /></td>
-                    <td class="string-body-sort">1234567890</td>
-                    <td class="string-body-sort">Juan Tamad</td>
-                    <td class="bdate-body-sort">11/01/1995</td>
-                    <td class="ddate-body-sort">11/02/2020</td>
-                    <td class="string-body-sort">
-                      <div class="chip orange-chip">Apartment</div>
-                    </td>
-                    <td>Block A, B2</td>
-                    <td class="action-buttons">
-                      <button
-                        class="show-button button"
-                        onclick="openDetailedViewOverlay()"
-                      >
-                        <i class="bx bx-show"></i>
-                      </button>
-
-                      <button
-                        class="edit-button button"
-                        onclick="openEditOverlay()"
-                      >
-                        <i class="bx bxs-edit-alt"></i>
-                      </button>
-
-                      <button
-                        class="archive-button button"
-                        onclick="openArchiveOverlay()"
-                      >
-                        <i class="bx bx-box"></i>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td><input type="checkbox" class="checkbox" /></td>
                     <td class="string-body-sort">2234567890</td>
                     <td class="string-body-sort">Mary Paingas</td>
                     <td class="bdate-body-sort">11/01/1998</td>
@@ -964,100 +800,7 @@
                       </button>
 
                       <button class="archive-button button">
-                        <i class="bx bx-box"></i>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td><input type="checkbox" class="checkbox" /></td>
-                    <td class="string-body-sort">1234567891</td>
-                    <td class="string-body-sort">Elton John Navarro</td>
-                    <td class="bdate-body-sort">11/25/1995</td>
-                    <td class="ddate-body-sort">11/12/2020</td>
-                    <td class="string-body-sort">
-                      <div class="chip red-chip">Bone Vault</div>
-                    </td>
-                    <td>Block A, B2</td>
-                    <td class="action-buttons">
-                      <button
-                        class="show-button button"
-                        onclick="openDetailedViewOverlay()"
-                      >
-                        <i class="bx bx-show"></i>
-                      </button>
-
-                      <button
-                        class="edit-button button"
-                        onclick="openEditOverlay()"
-                      >
-                        <i class="bx bxs-edit-alt"></i>
-                      </button>
-
-                      <button class="archive-button button">
-                        <i class="bx bx-box"></i>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td><input type="checkbox" class="checkbox" /></td>
-                    <td class="string-body-sort">1234567890</td>
-                    <td class="string-body-sort">Judea Nicole Guillen</td>
-                    <td class="bdate-body-sort">06/06/1995</td>
-                    <td class="ddate-body-sort">05/02/2020</td>
-                    <td class="string-body-sort">
-                      <div class="chip orange-chip">Apartment</div>
-                    </td>
-                    <td>Block A, B2</td>
-                    <td class="action-buttons">
-                      <button
-                        class="show-button button"
-                        onclick="openDetailedViewOverlay()"
-                      >
-                        <i class="bx bx-show"></i>
-                      </button>
-
-                      <button
-                        class="edit-button button"
-                        onclick="openEditOverlay()"
-                      >
-                        <i class="bx bxs-edit-alt"></i>
-                      </button>
-
-                      <button class="archive-button button">
-                        <i class="bx bx-box"></i>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td><input type="checkbox" class="checkbox" /></td>
-                    <td class="string-body-sort">1234567890</td>
-                    <td class="string-body-sort">John Russel Derpo</td>
-                    <td class="bdate-body-sort">03/01/1995</td>
-                    <td class="ddate-body-sort">07/02/2020</td>
-                    <td class="string-body-sort">
-                      <div class="chip orange-chip">Apartment</div>
-                    </td>
-                    <td>Block A, B2</td>
-                    <td class="action-buttons">
-                      <button
-                        class="show-button button"
-                        onclick="openDetailedViewOverlay()"
-                      >
-                        <i class="bx bx-show"></i>
-                      </button>
-
-                      <button
-                        class="edit-button button"
-                        onclick="openEditOverlay()"
-                      >
-                        <i class="bx bxs-edit-alt"></i>
-                      </button>
-
-                      <button class="archive-button button">
-                        <i class="bx bx-box"></i>
+                        <i class="bx bx-archive-in"></i>
                       </button>
                     </td>
                   </tr>
@@ -1088,100 +831,7 @@
                       </button>
 
                       <button class="archive-button button">
-                        <i class="bx bx-box"></i>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td><input type="checkbox" class="checkbox" /></td>
-                    <td class="string-body-sort">1234567890</td>
-                    <td class="string-body-sort">Rajap Benavidez</td>
-                    <td class="bdate-body-sort">11/01/1990</td>
-                    <td class="ddate-body-sort">11/02/2000</td>
-                    <td class="string-body-sort">
-                      <div class="chip orange-chip">Apartment</div>
-                    </td>
-                    <td>Block A, B2</td>
-                    <td class="action-buttons">
-                      <button
-                        class="show-button button"
-                        onclick="openDetailedViewOverlay()"
-                      >
-                        <i class="bx bx-show"></i>
-                      </button>
-
-                      <button
-                        class="edit-button button"
-                        onclick="openEditOverlay()"
-                      >
-                        <i class="bx bxs-edit-alt"></i>
-                      </button>
-
-                      <button class="archive-button button">
-                        <i class="bx bx-box"></i>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td><input type="checkbox" class="checkbox" /></td>
-                    <td class="string-body-sort">1234567890</td>
-                    <td class="string-body-sort">Clarence Paingas</td>
-                    <td class="bdate-body-sort">11/03/1995</td>
-                    <td class="ddate-body-sort">11/04/2020</td>
-                    <td class="string-body-sort">
-                      <div class="chip red-chip">Bone Vault</div>
-                    </td>
-                    <td>Block A, B2</td>
-                    <td class="action-buttons">
-                      <button
-                        class="show-button button"
-                        onclick="openDetailedViewOverlay()"
-                      >
-                        <i class="bx bx-show"></i>
-                      </button>
-
-                      <button
-                        class="edit-button button"
-                        onclick="openEditOverlay()"
-                      >
-                        <i class="bx bxs-edit-alt"></i>
-                      </button>
-
-                      <button class="archive-button button">
-                        <i class="bx bx-box"></i>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td><input type="checkbox" class="checkbox" /></td>
-                    <td class="string-body-sort">1234567890</td>
-                    <td class="string-body-sort">Dolores Paingas</td>
-                    <td class="bdate-body-sort">09/01/1995</td>
-                    <td class="ddate-body-sort">08/02/2020</td>
-                    <td class="string-body-sort">
-                      <div class="chip red-chip">Bone Vault</div>
-                    </td>
-                    <td>Block A, B2</td>
-                    <td class="action-buttons">
-                      <button
-                        class="show-button button"
-                        onclick="openDetailedViewOverlay()"
-                      >
-                        <i class="bx bx-show"></i>
-                      </button>
-
-                      <button
-                        class="edit-button button"
-                        onclick="openEditOverlay()"
-                      >
-                        <i class="bx bxs-edit-alt"></i>
-                      </button>
-
-                      <button class="archive-button button">
-                        <i class="bx bx-box"></i>
+                        <i class="bx bx-archive-in"></i>
                       </button>
                     </td>
                   </tr>
@@ -1220,7 +870,7 @@
                 onclick="openArchiveOverlay()"
                 disabled
               >
-                <i class="bx bx-box"></i>
+                <i class="bx bx-archive-in"></i>
               </button>
 
               <button
@@ -1251,71 +901,6 @@
                 <tbody id="bv-records-table">
                   <tr>
                     <td><input type="checkbox" class="checkbox" /></td>
-                    <td class="string-body-sort">1234567890</td>
-                    <td class="string-body-sort">Juan Tamad</td>
-                    <td class="bdate-body-sort">11/01/1995</td>
-                    <td class="ddate-body-sort">11/02/2020</td>
-                    <td class="string-body-sort">
-                      <div class="chip orange-chip">Apartment</div>
-                    </td>
-                    <td>Block A, B2</td>
-                    <td class="action-buttons">
-                      <button
-                        class="show-button button"
-                        onclick="openDetailedViewOverlay()"
-                      >
-                        <i class="bx bx-show"></i>
-                      </button>
-
-                      <button
-                        class="edit-button button"
-                        onclick="openEditOverlay()"
-                      >
-                        <i class="bx bxs-edit-alt"></i>
-                      </button>
-
-                      <button
-                        class="archive-button button"
-                        onclick="openArchiveOverlay()"
-                      >
-                        <i class="bx bx-box"></i>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td><input type="checkbox" class="checkbox" /></td>
-                    <td class="string-body-sort">2234567890</td>
-                    <td class="string-body-sort">Mary Paingas</td>
-                    <td class="bdate-body-sort">11/01/1998</td>
-                    <td class="ddate-body-sort">11/02/2017</td>
-                    <td class="string-body-sort">
-                      <div class="chip green-chip">Lawn</div>
-                    </td>
-                    <td>Block A, B2</td>
-                    <td class="action-buttons">
-                      <button
-                        class="show-button button"
-                        onclick="openDetailedViewOverlay()"
-                      >
-                        <i class="bx bx-show"></i>
-                      </button>
-
-                      <button
-                        class="edit-button button"
-                        onclick="openEditOverlay()"
-                      >
-                        <i class="bx bxs-edit-alt"></i>
-                      </button>
-
-                      <button class="archive-button button">
-                        <i class="bx bx-box"></i>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td><input type="checkbox" class="checkbox" /></td>
                     <td class="string-body-sort">1234567891</td>
                     <td class="string-body-sort">Elton John Navarro</td>
                     <td class="bdate-body-sort">11/25/1995</td>
@@ -1340,131 +925,7 @@
                       </button>
 
                       <button class="archive-button button">
-                        <i class="bx bx-box"></i>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td><input type="checkbox" class="checkbox" /></td>
-                    <td class="string-body-sort">1234567890</td>
-                    <td class="string-body-sort">Judea Nicole Guillen</td>
-                    <td class="bdate-body-sort">06/06/1995</td>
-                    <td class="ddate-body-sort">05/02/2020</td>
-                    <td class="string-body-sort">
-                      <div class="chip orange-chip">Apartment</div>
-                    </td>
-                    <td>Block A, B2</td>
-                    <td class="action-buttons">
-                      <button
-                        class="show-button button"
-                        onclick="openDetailedViewOverlay()"
-                      >
-                        <i class="bx bx-show"></i>
-                      </button>
-
-                      <button
-                        class="edit-button button"
-                        onclick="openEditOverlay()"
-                      >
-                        <i class="bx bxs-edit-alt"></i>
-                      </button>
-
-                      <button class="archive-button button">
-                        <i class="bx bx-box"></i>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td><input type="checkbox" class="checkbox" /></td>
-                    <td class="string-body-sort">1234567890</td>
-                    <td class="string-body-sort">John Russel Derpo</td>
-                    <td class="bdate-body-sort">03/01/1995</td>
-                    <td class="ddate-body-sort">07/02/2020</td>
-                    <td class="string-body-sort">
-                      <div class="chip orange-chip">Apartment</div>
-                    </td>
-                    <td>Block A, B2</td>
-                    <td class="action-buttons">
-                      <button
-                        class="show-button button"
-                        onclick="openDetailedViewOverlay()"
-                      >
-                        <i class="bx bx-show"></i>
-                      </button>
-
-                      <button
-                        class="edit-button button"
-                        onclick="openEditOverlay()"
-                      >
-                        <i class="bx bxs-edit-alt"></i>
-                      </button>
-
-                      <button class="archive-button button">
-                        <i class="bx bx-box"></i>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td><input type="checkbox" class="checkbox" /></td>
-                    <td class="string-body-sort">1234567890</td>
-                    <td class="string-body-sort">Erika Tecson</td>
-                    <td class="bdate-body-sort">11/01/1990</td>
-                    <td class="ddate-body-sort">11/02/2012</td>
-                    <td class="string-body-sort">
-                      <div class="chip green-chip">Lawn</div>
-                    </td>
-                    <td>Block A, B2</td>
-                    <td class="action-buttons">
-                      <button
-                        class="show-button button"
-                        onclick="openDetailedViewOverlay()"
-                      >
-                        <i class="bx bx-show"></i>
-                      </button>
-
-                      <button
-                        class="edit-button button"
-                        onclick="openEditOverlay()"
-                      >
-                        <i class="bx bxs-edit-alt"></i>
-                      </button>
-
-                      <button class="archive-button button">
-                        <i class="bx bx-box"></i>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td><input type="checkbox" class="checkbox" /></td>
-                    <td class="string-body-sort">1234567890</td>
-                    <td class="string-body-sort">Rajap Benavidez</td>
-                    <td class="bdate-body-sort">11/01/1990</td>
-                    <td class="ddate-body-sort">11/02/2000</td>
-                    <td class="string-body-sort">
-                      <div class="chip orange-chip">Apartment</div>
-                    </td>
-                    <td>Block A, B2</td>
-                    <td class="action-buttons">
-                      <button
-                        class="show-button button"
-                        onclick="openDetailedViewOverlay()"
-                      >
-                        <i class="bx bx-show"></i>
-                      </button>
-
-                      <button
-                        class="edit-button button"
-                        onclick="openEditOverlay()"
-                      >
-                        <i class="bx bxs-edit-alt"></i>
-                      </button>
-
-                      <button class="archive-button button">
-                        <i class="bx bx-box"></i>
+                        <i class="bx bx-archive-in"></i>
                       </button>
                     </td>
                   </tr>
@@ -1495,7 +956,7 @@
                       </button>
 
                       <button class="archive-button button">
-                        <i class="bx bx-box"></i>
+                        <i class="bx bx-archive-in"></i>
                       </button>
                     </td>
                   </tr>
@@ -1526,7 +987,7 @@
                       </button>
 
                       <button class="archive-button button">
-                        <i class="bx bx-box"></i>
+                        <i class="bx bx-archive-in"></i>
                       </button>
                     </td>
                   </tr>
@@ -1562,34 +1023,34 @@
 
               <button
                 class="multi-archive-button arc-btn button"
-                onclick="openArchiveOverlay()"
+                onclick="openUnarchiveOverlay()"
                 disabled
               >
-                <i class="bx bx-box"></i>
+                <i class="bx bx-archive-out"></i>
               </button>
 
-              <button
+              <!-- <button
                 class="create-button button"
                 onclick="openCreateOverlay()"
               >
                 <p class="create-button-name">Create</p>
                 <i class="bx bx-plus"></i>
-              </button>
+              </button> -->
             </div>
 
             <div class="table-container records-table-container">
               <table class="records-table arc-table">
                 <thead>
                   <tr>
-                    <th><input type="checkbox" /></th>
+                    <th><input type="checkbox" class="checkbox" /></th>
                     <th class="string-header-sort id-sort">ID</th>
                     <th class="string-header-sort name-sort">Name</th>
                     <th class="bdate-header-sort">Birth Date</th>
                     <th class="ddate-header-sort">Death Date</th>
                     <th class="string-header-sort grave-type-sort">
-                      Grave Type
+                      Previous Grave Type
                     </th>
-                    <th>Location</th>
+                    <th>Previous Location</th>
                     <th>Action</th>
                   </tr>
                 </thead>
@@ -1606,24 +1067,10 @@
                     <td>Block A, B2</td>
                     <td class="action-buttons">
                       <button
-                        class="show-button button"
-                        onclick="openDetailedViewOverlay()"
-                      >
-                        <i class="bx bx-show"></i>
-                      </button>
-
-                      <button
-                        class="edit-button button"
-                        onclick="openEditOverlay()"
-                      >
-                        <i class="bx bxs-edit-alt"></i>
-                      </button>
-
-                      <button
                         class="archive-button button"
-                        onclick="openArchiveOverlay()"
+                        onclick="openUnarchiveOverlay()"
                       >
-                        <i class="bx bx-box"></i>
+                        <i class="bx bx-archive-out"></i>
                       </button>
                     </td>
                   </tr>
@@ -1639,22 +1086,8 @@
                     </td>
                     <td>Block A, B2</td>
                     <td class="action-buttons">
-                      <button
-                        class="show-button button"
-                        onclick="openDetailedViewOverlay()"
-                      >
-                        <i class="bx bx-show"></i>
-                      </button>
-
-                      <button
-                        class="edit-button button"
-                        onclick="openEditOverlay()"
-                      >
-                        <i class="bx bxs-edit-alt"></i>
-                      </button>
-
                       <button class="archive-button button">
-                        <i class="bx bx-box"></i>
+                        <i class="bx bx-archive-out"></i>
                       </button>
                     </td>
                   </tr>
@@ -1670,208 +1103,8 @@
                     </td>
                     <td>Block A, B2</td>
                     <td class="action-buttons">
-                      <button
-                        class="show-button button"
-                        onclick="openDetailedViewOverlay()"
-                      >
-                        <i class="bx bx-show"></i>
-                      </button>
-
-                      <button
-                        class="edit-button button"
-                        onclick="openEditOverlay()"
-                      >
-                        <i class="bx bxs-edit-alt"></i>
-                      </button>
-
                       <button class="archive-button button">
-                        <i class="bx bx-box"></i>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td><input type="checkbox" class="checkbox" /></td>
-                    <td class="string-body-sort">1234567890</td>
-                    <td class="string-body-sort">Judea Nicole Guillen</td>
-                    <td class="bdate-body-sort">06/06/1995</td>
-                    <td class="ddate-body-sort">05/02/2020</td>
-                    <td class="string-body-sort">
-                      <div class="chip orange-chip">Apartment</div>
-                    </td>
-                    <td>Block A, B2</td>
-                    <td class="action-buttons">
-                      <button
-                        class="show-button button"
-                        onclick="openDetailedViewOverlay()"
-                      >
-                        <i class="bx bx-show"></i>
-                      </button>
-
-                      <button
-                        class="edit-button button"
-                        onclick="openEditOverlay()"
-                      >
-                        <i class="bx bxs-edit-alt"></i>
-                      </button>
-
-                      <button class="archive-button button">
-                        <i class="bx bx-box"></i>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td><input type="checkbox" class="checkbox" /></td>
-                    <td class="string-body-sort">1234567890</td>
-                    <td class="string-body-sort">John Russel Derpo</td>
-                    <td class="bdate-body-sort">03/01/1995</td>
-                    <td class="ddate-body-sort">07/02/2020</td>
-                    <td class="string-body-sort">
-                      <div class="chip orange-chip">Apartment</div>
-                    </td>
-                    <td>Block A, B2</td>
-                    <td class="action-buttons">
-                      <button
-                        class="show-button button"
-                        onclick="openDetailedViewOverlay()"
-                      >
-                        <i class="bx bx-show"></i>
-                      </button>
-
-                      <button
-                        class="edit-button button"
-                        onclick="openEditOverlay()"
-                      >
-                        <i class="bx bxs-edit-alt"></i>
-                      </button>
-
-                      <button class="archive-button button">
-                        <i class="bx bx-box"></i>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td><input type="checkbox" class="checkbox" /></td>
-                    <td class="string-body-sort">1234567890</td>
-                    <td class="string-body-sort">Erika Tecson</td>
-                    <td class="bdate-body-sort">11/01/1990</td>
-                    <td class="ddate-body-sort">11/02/2012</td>
-                    <td class="string-body-sort">
-                      <div class="chip green-chip">Lawn</div>
-                    </td>
-                    <td>Block A, B2</td>
-                    <td class="action-buttons">
-                      <button
-                        class="show-button button"
-                        onclick="openDetailedViewOverlay()"
-                      >
-                        <i class="bx bx-show"></i>
-                      </button>
-
-                      <button
-                        class="edit-button button"
-                        onclick="openEditOverlay()"
-                      >
-                        <i class="bx bxs-edit-alt"></i>
-                      </button>
-
-                      <button class="archive-button button">
-                        <i class="bx bx-box"></i>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td><input type="checkbox" class="checkbox" /></td>
-                    <td class="string-body-sort">1234567890</td>
-                    <td class="string-body-sort">Rajap Benavidez</td>
-                    <td class="bdate-body-sort">11/01/1990</td>
-                    <td class="ddate-body-sort">11/02/2000</td>
-                    <td class="string-body-sort">
-                      <div class="chip orange-chip">Apartment</div>
-                    </td>
-                    <td>Block A, B2</td>
-                    <td class="action-buttons">
-                      <button
-                        class="show-button button"
-                        onclick="openDetailedViewOverlay()"
-                      >
-                        <i class="bx bx-show"></i>
-                      </button>
-
-                      <button
-                        class="edit-button button"
-                        onclick="openEditOverlay()"
-                      >
-                        <i class="bx bxs-edit-alt"></i>
-                      </button>
-
-                      <button class="archive-button button">
-                        <i class="bx bx-box"></i>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td><input type="checkbox" class="checkbox" /></td>
-                    <td class="string-body-sort">1234567890</td>
-                    <td class="string-body-sort">Clarence Paingas</td>
-                    <td class="bdate-body-sort">11/03/1995</td>
-                    <td class="ddate-body-sort">11/04/2020</td>
-                    <td class="string-body-sort">
-                      <div class="chip red-chip">Bone Vault</div>
-                    </td>
-                    <td>Block A, B2</td>
-                    <td class="action-buttons">
-                      <button
-                        class="show-button button"
-                        onclick="openDetailedViewOverlay()"
-                      >
-                        <i class="bx bx-show"></i>
-                      </button>
-
-                      <button
-                        class="edit-button button"
-                        onclick="openEditOverlay()"
-                      >
-                        <i class="bx bxs-edit-alt"></i>
-                      </button>
-
-                      <button class="archive-button button">
-                        <i class="bx bx-box"></i>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td><input type="checkbox" class="checkbox" /></td>
-                    <td class="string-body-sort">1234567890</td>
-                    <td class="string-body-sort">Dolores Paingas</td>
-                    <td class="bdate-body-sort">09/01/1995</td>
-                    <td class="ddate-body-sort">08/02/2020</td>
-                    <td class="string-body-sort">
-                      <div class="chip red-chip">Bone Vault</div>
-                    </td>
-                    <td>Block A, B2</td>
-                    <td class="action-buttons">
-                      <button
-                        class="show-button button"
-                        onclick="openDetailedViewOverlay()"
-                      >
-                        <i class="bx bx-show"></i>
-                      </button>
-
-                      <button
-                        class="edit-button button"
-                        onclick="openEditOverlay()"
-                      >
-                        <i class="bx bxs-edit-alt"></i>
-                      </button>
-
-                      <button class="archive-button button">
-                        <i class="bx bx-box"></i>
+                        <i class="bx bx-archive-out"></i>
                       </button>
                     </td>
                   </tr>
@@ -2117,7 +1350,11 @@
           <button class="cancel-button button" onclick="closeCreateOverlay()">
             Cancel
           </button>
-          <button class="submit-button button" onclick="validateForm()">
+          <button
+            class="submit-button button"
+            onclick="validateForm()"
+            id="createNewRecord"
+          >
             Save Record
           </button>
         </div>
@@ -2394,7 +1631,38 @@
           <button class="cancel-button button" onclick="closeArchiveOverlay()">
             No
           </button>
-          <button class="submit-button button">Yes</button>
+          <button class="submit-button button" id="confirm-archive-record">
+            Yes
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="overlay-wrapper"
+      id="unarchive-record-overlay"
+      style="display: none"
+    >
+      <div class="overlay container-shadow">
+        <h2 class="overlay-name">Archive record?</h2>
+
+        <div class="overlay-details">
+          <p class="unarchive-message">
+            Are you sure you want to
+            <span class="highlight green">unarchive</span> this record?
+          </p>
+        </div>
+
+        <div class="overlay-controls">
+          <button
+            class="cancel-button button"
+            onclick="closeUnarchiveOverlay()"
+          >
+            No
+          </button>
+          <button class="submit-button button" id="confirm-unarchive-record">
+            Yes
+          </button>
         </div>
       </div>
     </div>

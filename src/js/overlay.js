@@ -52,6 +52,24 @@ function closeArchiveOverlay() {
   }
 }
 
+function openUnarchiveOverlay() {
+  var x = document.querySelector("#unarchive-record-overlay");
+  if (x.style.display !== "none") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "flex";
+  }
+}
+
+function closeUnarchiveOverlay() {
+  var x = document.querySelector("#unarchive-record-overlay");
+  if (x.style.display !== "none") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "flex";
+  }
+}
+
 function openDetailedViewOverlay() {
   var x = document.querySelector("#view-details-record-overlay");
   if (x.style.display !== "none") {
@@ -455,5 +473,29 @@ function validateEditBlockForm() {
     errorMessage.style.display = "block";
   } else {
     errorMessage.style.display = "none";
+  }
+}
+
+function openConfirmOverlay() {
+  var x = document.querySelector("#confirm-overlay");
+  var y = document.querySelector("#security-settings-overlay");
+  if (x.style.display !== "none") {
+    x.style.display = "none";
+    y.style.display = "flex";
+  } else {
+    x.style.display = "flex";
+    y.style.display = "none";
+  }
+}
+
+function closeConfirmOverlay() {
+  var x = document.querySelector("#confirm-overlay");
+  var y = document.querySelector("#security-settings-overlay");
+  if (x.style.display !== "none") {
+    x.style.display = "none";
+    y.style.display = "flex";
+  } else {
+    x.style.display = "flex";
+    y.style.display = "none";
   }
 }

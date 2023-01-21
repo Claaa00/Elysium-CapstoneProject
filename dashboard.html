@@ -48,7 +48,9 @@
             height="100px"
             style="border-radius: 50%"
           />
-          <p class="cemetery-name">Binan City Cemetery</p>
+          <p class="cemetery-name" id="aside-cemetery-name">
+            Binan City Cemetery
+          </p>
         </div>
 
         <nav class="navigations">
@@ -91,7 +93,7 @@
         </nav>
 
         <div class="logout-button">
-          <a href="./" class="link-item">
+          <a href="./" class="link-item" id="logout-button">
             <li class="link">
               <p class="link-name">Logout</p>
               <i class="bx bx-log-out"></i>
@@ -110,6 +112,7 @@
                 type="search"
                 class="search-bar"
                 placeholder="Search for records.."
+                id="header-search-box"
               />
             </form>
 
@@ -122,19 +125,26 @@
 
         <div class="greeting-container">
           <div class="greeting main-padding">
-            <p class="intro-greeting">Welcome back to Elysium!</p>
+            <p class="intro-greeting">
+              Welcome back to <span translate="no">Elysium</span>!
+            </p>
 
-            <h1 class="cemetery-name">Binan City Cemetery</h1>
+            <h1 class="cemetery-name" id="greeting-cemetery-name">
+              Binan City Cemetery
+            </h1>
           </div>
         </div>
 
         <div class="dashboard-info-group">
           <div class="left-info-group">
             <div class="top-info">
-              <div class="statistics-container container-shadow">
+              <div
+                class="statistics-container container-shadow"
+                id="statistics-container"
+              >
                 <div class="main-info">
                   <div class="graves-statistics-info">
-                    <h1 class="graves-statistic">1,000,000</h1>
+                    <h1 class="graves-statistic" id="graveCount">1,000,000</h1>
                     <small class="statistic-label">Grave</small>
                   </div>
 
@@ -150,7 +160,7 @@
                       <small class="statistic-label">Apartment</small>
                     </div>
 
-                    <p class="statistic-data">1,000,000</p>
+                    <p class="statistic-data" id="apartmentCount">1,000,000</p>
                   </div>
 
                   <div class="other-statistics">
@@ -159,7 +169,7 @@
                       <small class="statistic-label">Lawn</small>
                     </div>
 
-                    <p class="statistic-data">1,000,000</p>
+                    <p class="statistic-data" id="lawnCount">1,000,000</p>
                   </div>
 
                   <div class="other-statistics">
@@ -168,21 +178,24 @@
                       <small class="statistic-label">Bone Vault</small>
                     </div>
 
-                    <p class="statistic-data">1,000,000</p>
+                    <p class="statistic-data" id="boneVaultCount">1,000,000</p>
                   </div>
                 </div>
               </div>
 
               <div
                 class="recent-activities-container main-padding container-shadow"
+                id="activities-container"
               >
                 <h2 class="container-label">Recent Activities</h2>
 
                 <div class="activities">
-                  <div class="activity">
-                    <p class="record-id">1234567890</p>
+                  <div class="activity" id="activity">
+                    <p class="record-id" id="activityRecordId">1234567890</p>
 
-                    <div class="chip green-chip">Created</div>
+                    <div class="chip green-chip" id="activityRecordAction">
+                      Created
+                    </div>
                   </div>
 
                   <div class="activity">
@@ -240,7 +253,7 @@
             <h2 class="container-label">Latest Records</h2>
 
             <div class="table-container dashboard-table-container">
-              <table class="records-table">
+              <table class="records-table" id="dashboard-table-container">
                 <thead>
                   <tr>
                     <th class="string-header-sort id-sort">ID</th>
@@ -253,19 +266,28 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="string-body-sort">1234567890</td>
-                    <td class="string-body-sort">Juan Tamad</td>
-                    <td class="string-body-sort">
-                      <div class="chip orange-chip">Apartment</div>
+                    <td class="string-body-sort" id="dashboardTableId">
+                      1234567890
                     </td>
-                    <td>Block A, B2</td>
+                    <td class="string-body-sort" id="dashboardTableName">
+                      <span id="dashboardTableFName">Juan</span>
+                      <span id="dashboardTableLName">Tamad</span>
+                    </td>
+                    <td class="string-body-sort" id="dashboardTableGraveType">
+                      <div class="chip green-chip">Apartment</div>
+                    </td>
+                    <td id="dashboardTableLocation">
+                      <span id="dashboardTableLocationBlock">Block A</span>,
+                      <span id="dashboardTableLocationColumn">B</span
+                      ><span id="dashboardTableLocationRow">3</span>
+                    </td>
                   </tr>
 
                   <tr>
                     <td class="string-body-sort">1234567890</td>
                     <td class="string-body-sort">Mary Paingas</td>
                     <td class="string-body-sort">
-                      <div class="chip green-chip">Lawn</div>
+                      <div class="chip orange-chip">Lawn</div>
                     </td>
                     <td>Block A, B2</td>
                   </tr>
@@ -273,60 +295,6 @@
                   <tr>
                     <td class="string-body-sort">1234567890</td>
                     <td class="string-body-sort">Elton John Navarro</td>
-                    <td class="string-body-sort">
-                      <div class="chip red-chip">Bone Vault</div>
-                    </td>
-                    <td>Block A, B2</td>
-                  </tr>
-
-                  <tr>
-                    <td class="string-body-sort">1234567890</td>
-                    <td class="string-body-sort">Judea Nicole Guillen</td>
-                    <td class="string-body-sort">
-                      <div class="chip orange-chip">Apartment</div>
-                    </td>
-                    <td>Block A, B2</td>
-                  </tr>
-
-                  <tr>
-                    <td class="string-body-sort">1234567890</td>
-                    <td class="string-body-sort">John Russel Derpo</td>
-                    <td class="string-body-sort">
-                      <div class="chip orange-chip">Apartment</div>
-                    </td>
-                    <td>Block A, B2</td>
-                  </tr>
-
-                  <tr>
-                    <td class="string-body-sort">1234567890</td>
-                    <td class="string-body-sort">Erika Tecson</td>
-                    <td class="string-body-sort">
-                      <div class="chip green-chip">Lawn</div>
-                    </td>
-                    <td>Block A, B2</td>
-                  </tr>
-
-                  <tr>
-                    <td class="string-body-sort">1234567890</td>
-                    <td class="string-body-sort">Rajap Benavidez</td>
-                    <td class="string-body-sort">
-                      <div class="chip orange-chip">Apartment</div>
-                    </td>
-                    <td>Block A, B2</td>
-                  </tr>
-
-                  <tr>
-                    <td class="string-body-sort">1234567890</td>
-                    <td class="string-body-sort">Clarence Paingas</td>
-                    <td class="string-body-sort">
-                      <div class="chip red-chip">Bone Vault</div>
-                    </td>
-                    <td>Block A, B2</td>
-                  </tr>
-
-                  <tr>
-                    <td class="string-body-sort">1234567890</td>
-                    <td class="string-body-sort">Dolores Paingas</td>
                     <td class="string-body-sort">
                       <div class="chip red-chip">Bone Vault</div>
                     </td>
@@ -574,7 +542,11 @@
           <button class="cancel-button button" onclick="closeCreateOverlay()">
             Cancel
           </button>
-          <button class="submit-button button" onclick="validateForm()">
+          <button
+            class="submit-button button"
+            onclick="validateForm()"
+            id="createNewRecord"
+          >
             Save Record
           </button>
         </div>

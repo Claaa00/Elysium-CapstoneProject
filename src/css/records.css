@@ -190,3 +190,23 @@
   font-weight: 600;
   text-transform: uppercase;
 }
+
+.records-table tr td:nth-of-type(6),
+.records-table tr th:nth-of-type(6),
+.arc-table tr th:nth-of-type(8),
+.arc-table tr td:nth-of-type(8) {
+  display: flex !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.records-table tr td:nth-of-type(5),
+.records-table tr th:nth-of-type(5),
+.records-table tr td:nth-of-type(4),
+.records-table tr th:nth-of-type(4) {
+  text-align: center;
+}
+
+.green {
+  color: green;
+}

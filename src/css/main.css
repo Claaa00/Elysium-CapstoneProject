@@ -451,6 +451,10 @@ tbody td {
   font-weight: 700;
 }
 
+.archive-button .bx-archive-out {
+  color: green;
+}
+
 @media screen and (max-width: 992px) {
   .tab button .badge {
     display: none;

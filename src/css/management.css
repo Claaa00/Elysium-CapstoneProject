@@ -78,7 +78,7 @@
   border: 1px solid transparent;
 }
 
-.records-table-container {
+.management-table-container {
   max-height: calc(100% - 66px);
   /* max-height: calc(100% - 86px); */
 }

@@ -48,7 +48,9 @@
             height="100px"
             style="border-radius: 50%"
           />
-          <p class="cemetery-name">Binan City Cemetery</p>
+          <p class="cemetery-name" id="aside-cemetery-name">
+            Binan City Cemetery
+          </p>
         </div>
 
         <nav class="navigations">
@@ -91,7 +93,7 @@
         </nav>
 
         <div class="logout-button">
-          <a href="./" class="link-item">
+          <a href="./" class="link-item" id="logout-button">
             <li class="link">
               <p class="link-name">Logout</p>
               <i class="bx bx-log-out"></i>
@@ -110,6 +112,7 @@
                 type="search"
                 class="search-bar"
                 placeholder="Search for records.."
+                id="header-search-box"
               />
             </form>
 
@@ -131,6 +134,7 @@
                     type="search"
                     class="search-bar"
                     placeholder="Search for records.."
+                    id="map-search-box"
                   />
                 </form>
 
@@ -141,12 +145,18 @@
             </div>
 
             <div class="map-search-result-container">
-              <div class="card">
+              <div class="card" id="card">
                 <div class="card-top-group">
                   <div class="card-main-info">
-                    <i class="bx bxs-map apartment-type"></i>
+                    <i
+                      class="bx bxs-map apartment-type"
+                      id="mapGraveTypeIcon"
+                    ></i>
 
-                    <h3 class="record-name">Juan Tamad</h3>
+                    <h3 class="record-name" id="mapCardName">
+                      <span id="mapCardFName">Juan</span>
+                      <span id="mapCardLName">Tamad</span>
+                    </h3>
                   </div>
 
                   <i
@@ -157,104 +167,24 @@
 
                 <div class="card-sub-info">
                   <div class="location-info-container info">
-                    Location: <span class="location-info">Block A, B2</span>
+                    Location:
+                    <span class="location-info" id="mapCardLocation">
+                      <span id="mapCardLocationBlock">Block A</span>,
+                      <span id="mapCardLocationColumn">B</span
+                      ><span id="mapCardLocationRow">2</span></span
+                    >
                   </div>
 
                   <div class="grave-type-info-container info">
-                    Grave Type: <span class="grave-type-info">Apartment</span>
+                    Grave Type:
+                    <span class="grave-type-info" id="mapCardGraveType"
+                      >Apartment</span
+                    >
                   </div>
 
                   <div class="dates-info-container info hidden">
-                    <span class="dob">11/01/1995</span> -
-                    <span class="dod">11/02/2020</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-top-group">
-                  <div class="card-main-info">
-                    <i class="bx bxs-map apartment-type"></i>
-
-                    <h3 class="record-name">Juan Tamad</h3>
-                  </div>
-
-                  <i class="bx bx-chevron-right back"></i>
-                </div>
-
-                <div class="card-sub-info">
-                  <div class="location-info-container info">
-                    Location: <span class="location-info">Block A, B2</span>
-                  </div>
-
-                  <div class="grave-type-info-container info">
-                    Grave Type: <span class="grave-type-info">Apartment</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-top-group">
-                  <div class="card-main-info">
-                    <i class="bx bxs-map apartment-type"></i>
-
-                    <h3 class="record-name">Juan Tamad</h3>
-                  </div>
-
-                  <i class="bx bx-chevron-right back"></i>
-                </div>
-
-                <div class="card-sub-info">
-                  <div class="location-info-container info">
-                    Location: <span class="location-info">Block A, B2</span>
-                  </div>
-
-                  <div class="grave-type-info-container info">
-                    Grave Type: <span class="grave-type-info">Apartment</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-top-group">
-                  <div class="card-main-info">
-                    <i class="bx bxs-map apartment-type"></i>
-
-                    <h3 class="record-name">Juan Tamad</h3>
-                  </div>
-
-                  <i class="bx bx-chevron-right back"></i>
-                </div>
-
-                <div class="card-sub-info">
-                  <div class="location-info-container info">
-                    Location: <span class="location-info">Block A, B2</span>
-                  </div>
-
-                  <div class="grave-type-info-container info">
-                    Grave Type: <span class="grave-type-info">Apartment</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-top-group">
-                  <div class="card-main-info">
-                    <i class="bx bxs-map apartment-type"></i>
-
-                    <h3 class="record-name">Juan Tamad</h3>
-                  </div>
-
-                  <i class="bx bx-chevron-right back"></i>
-                </div>
-
-                <div class="card-sub-info">
-                  <div class="location-info-container info">
-                    Location: <span class="location-info">Block A, B2</span>
-                  </div>
-
-                  <div class="grave-type-info-container info">
-                    Grave Type: <span class="grave-type-info">Apartment</span>
+                    <span class="dob" id="mapCardDOB">11/01/1995</span> -
+                    <span class="dod" id="mapCardDOD">11/02/2020</span>
                   </div>
                 </div>
               </div>
@@ -290,8 +220,8 @@
             />
 
             <div class="map-controls container-shadow">
-              <i class="bx bx-plus"></i>
-              <i class="bx bx-minus"></i>
+              <i class="bx bx-plus" id="zoomIn"></i>
+              <i class="bx bx-minus" id="zoomOut"></i>
             </div>
           </div>
         </div>
@@ -532,35 +462,53 @@
           <button class="cancel-button button" onclick="closeCreateOverlay()">
             Cancel
           </button>
-          <button class="submit-button button" onclick="validateForm()">
+          <button
+            class="submit-button button"
+            onclick="validateForm()"
+            id="createNewRecord"
+          >
             Save Record
           </button>
         </div>
       </div>
     </div>
 
-    <div class="map-card-overlay container-shadow" style="display: none">
+    <div
+      class="map-card-overlay container-shadow"
+      style="display: none"
+      id="map-card-overlay"
+    >
       <div class="map-card-top-container">
-        <span class="record-id">1234567890</span>
+        <span class="record-id" id="mapCardOverlayId">1234567890</span>
 
-        <span class="grave-type"
+        <span class="grave-type" id="mapCardOverlayGraveType"
           ><div class="chip green-chip">Apartment</div></span
         >
       </div>
 
       <div class="map-card-info">
-        <strong class="record-name">Juan Tamad</strong>
+        <strong class="record-name" id="mapCardOverlayName">
+          <span id="mapCardOverlayFName">Juan</span>
+          <span id="mapCardOverlayLName">Tamad</span></strong
+        >
 
         <p class="dates">
-          <span class="dob">11/01/1995</span> -
-          <span class="dod">11/02/2020</span>
+          <span class="dob" id="mapCardOverlayDOB">11/01/1995</span> -
+          <span class="dod" id="mapCardOverlayDOD">11/02/2020</span>
         </p>
 
-        <p class="address">Block A, B2</p>
+        <p class="address" id="mapCardOverlayLocation">
+          <span id="mapCardOverlayLocationBlock">Block A</span>,
+          <span id="mapCardOverlayLocationColumn">B</span
+          ><span id="mapCardOverlayLocationRow">2</span>
+        </p>
       </div>
 
       <div class="map-card-button">
-        <button class="redirect-button button map-button">
+        <button
+          class="redirect-button button map-button"
+          id="mapCardOverlayViewRecordBtn"
+        >
           View in records
         </button>
         <button class="close-button map-button" onclick="closeMapCardOverlay()">
